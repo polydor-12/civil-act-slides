@@ -1,5 +1,5 @@
-// 이전에 다시 로드된 스크립트를 추적하기 위한 Set
-const reloadedScripts = new Set<string>();
+// reloadHeadScripts.ts
+
 const scriptCache = new Map<string, Promise<string>>();
 
 type ReloadOptions = {
@@ -99,18 +99,6 @@ export async function reloadHeadScripts(
     (s) => {
       // filter 콜백이 있으면 통과 여부 체크
       if (filter && !filter(s as HTMLScriptElement)) return false;
-
-      // 이 함수에 의해 생성된 스크립트(blob URL)는 건너뛴다.
-      if (s.dataset.originalSrc) return false;
-
-      // 식별자를 사용하여 이미 처리된 스크립트인지 확인
-      const identifier = s.src
-        ? new URL(s.src, document.baseURI).href
-        : s.textContent?.trim();
-      if (identifier && reloadedScripts.has(identifier)) {
-        return false;
-      }
-
       // inline, external 모두 포함
       return true;
     }
@@ -126,15 +114,6 @@ export async function reloadHeadScripts(
       const el = scripts[i];
       try {
         await loadScriptElement(el, opts);
-
-        // 성공적으로 로드된 스크립트를 Set에 추가
-        const identifier = el.src
-          ? new URL(el.src, document.baseURI).href
-          : el.textContent?.trim();
-        if (identifier) {
-          reloadedScripts.add(identifier);
-        }
-
         // 원본 제거 옵션
         if (removeOriginal) {
           try {
