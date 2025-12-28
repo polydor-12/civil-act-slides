@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>민법상 특수불법행위 - 사용자책임</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #60a5fa;
+      }
+      .icon-box {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(37, 99, 235, 0.3);
+      }
+      .section-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative text-xl">
+      <!-- Decorative elements -->
+      <div
+        class="absolute top-0 right-0 w-48 h-48 bg-blue-400 opacity-10 rounded-bl-full"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-64 h-64 bg-blue-300 opacity-10 rounded-tr-full"
+      ></div>
+      <!-- Header -->
+      <div class="w-full py-6 px-12 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">
+          민법상 특수불법행위 - 사용자책임
+        </h1>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 py-10 px-20 grid grid-cols-2 gap-20">
+        <!-- Left Column -->
+        <div class="flex flex-col space-y-4">
+          <!-- Definition section -->
+          <div>
+            <div class="section-title">
+              <div class="icon-box mr-3">
+                <i class="fas fa-info-circle text-xl text-white"></i>
+              </div>
+              <h2 class="text-2xl font-semibold text-blue-100">의의</h2>
+            </div>
+            <div class="content-box rounded-md p-4 leading-[1.8]">
+              <p class="text-white">
+                • 사용자가 피용자의 사무집행 관련 행위로 제3자에게 <br />
+                <span class="pl-3.5"></span> 발생한 손해를 배상하는 책임
+              </p>
+              <p class="text-white">
+                • 증명책임이 전환됨 (사용자가 자신의 면책사유를 <br />
+                <span class="pl-3.5"></span>증명해야 함)
+              </p>
+            </div>
+          </div>
+          <!-- Requirements section -->
+          <div>
+            <div class="section-title">
+              <div class="icon-box mr-3">
+                <i class="fas fa-list-check text-xl text-white"></i>
+              </div>
+              <h2 class="text-2xl font-semibold text-blue-100">성립요건</h2>
+            </div>
+            <div class="content-box rounded-md p-4">
+              <ul class="text-white space-y-2">
+                <li>① 타인의 사용 (실질적인 사용관계)</li>
+                <li>② 피용자의 사무집행 (외형이론)</li>
+                <li>③ 피용자의 불법행위</li>
+                <li>④ 사용자 면책사유의 부존재</li>
+                <li class="text-blue-200 pl-4">
+                  ※ 판례는 면책사유를 인정한 경우가 없음
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Right Column -->
+        <div class="flex flex-col space-y-4">
+          <!-- Effects section -->
+          <div>
+            <div class="section-title">
+              <div class="icon-box mr-3">
+                <i class="fas fa-gavel text-xl text-white"></i>
+              </div>
+              <h2 class="text-2xl font-semibold text-blue-100">효과</h2>
+            </div>
+            <div class="content-box rounded-md p-4 leading-[1.8]">
+              <p class="text-white">
+                • 피해자는 피용자뿐만 아니라 사용자에게도 손해배상 <br />
+                <span class="pl-3.5"></span>을 청구 가능
+              </p>
+              <p class="text-white">
+                • 사용자가 손해배상을 한 경우 피용자에게 구상권 행 <br />
+                <span class="pl-3.5"></span>사 가능
+              </p>
+            </div>
+          </div>
+          <!-- Government Compensation Act section -->
+          <div>
+            <div class="section-title">
+              <div class="icon-box mr-3">
+                <i class="fas fa-landmark text-xl text-white"></i>
+              </div>
+              <h2 class="text-2xl font-semibold text-blue-100">국가배상법</h2>
+            </div>
+            <div class="content-box rounded-md p-4">
+              <ul class="text-white space-y-2">
+                <li>• 공무원의 직무상 불법행위 (민법 적용배제)</li>
+                <li>• 국가ㆍ지방자치단체의 책임 인정</li>
+                <li>• 무과실책임 (고의ㆍ과실 관계없이 인정)</li>
+                <li>• 공무원 경과실 : 공무원은 책임 없음, 국가만 책임</li>
+                <li>• 공무원 고의ㆍ중과실: 국가의 구상권 행사 가능</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">29 / 32</p>
+      </div>
+    </div>
+  </body>
+</html>

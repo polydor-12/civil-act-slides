@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>법정지상권</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .feature-item {
+        transition: all 0.3s ease;
+      }
+      .feature-item:hover {
+        transform: translateX(5px);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <h1 class="text-4xl font-bold">법정지상권</h1>
+        <div class="mt-2 text-blue-300">
+          법정지상권의 의의와 유형에 대한 설명
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-37 bottom-16 left-0 right-0 px-16">
+        <!-- Definition and concept section -->
+        <div class="mb-8">
+          <div class="flex items-start">
+            <div class="text-blue-300 text-4xl mr-4">
+              <i class="fas fa-landmark"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">의의</h3>
+              <p class="text-lg">
+                건물과 토지가 한 사람에게 속하다가 건물 또는 토지에 대한
+                담보물권의 실행에 의하여 건물과 토지의 소유자가 달라지게 된 경우
+                토지소유자가 건물소유자에 대하여 지상권을 설정해 준 것으로 보는
+                제도
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Purpose and characteristics -->
+        <div class="grid grid-cols-2 gap-8 mb-8">
+          <div
+            class="bg-blue-800 bg-opacity-50 rounded-lg px-6 py-3 border border-blue-700"
+          >
+            <div class="flex items-center mb-3">
+              <div class="text-blue-300 text-2xl mr-3">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <h3 class="text-xl font-bold">목적</h3>
+            </div>
+            <p class="text-lg">
+              토지소유자가 건물소유자에게 토지의 이용권 없음을 이유로 건물의
+              철거를 청구하는 것을 방지하기 위함
+            </p>
+          </div>
+          <div
+            class="bg-blue-800 bg-opacity-50 rounded-lg px-6 py-3 border border-blue-700"
+          >
+            <div class="flex items-center mb-3">
+              <div class="text-blue-300 text-2xl mr-3">
+                <i class="fas fa-fingerprint"></i>
+              </div>
+              <h3 class="text-xl font-bold">특징</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue-300 mt-1 mr-2"></i>
+                <span>법률의 규정에 따라 성립</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue-300 mt-1 mr-2"></i>
+                <span>등기를 요하지 않음 (단, 처분시는 필요)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue-300 mt-1 mr-2"></i>
+                <span>지료는 지급</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Types of legal superficies -->
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="text-blue-300 text-3xl mr-3">
+              <i class="fas fa-sitemap"></i>
+            </div>
+            <h3 class="text-2xl font-bold">유형</h3>
+          </div>
+          <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+            <!-- Type 1 -->
+            <div class="feature-item flex items-start">
+              <div class="text-blue-300 text-xl mr-3 mt-1">
+                <i class="fas fa-building"></i>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold mb-1">
+                  전세건물의 보호를 위한 경우
+                </h4>
+                <p class="text-base">
+                  전세권이 설정된 건물의 토지와 건물 소유자가 달라진 경우
+                </p>
+              </div>
+            </div>
+            <!-- Type 2 -->
+            <div class="feature-item flex items-start">
+              <div class="text-blue-300 text-xl mr-3 mt-1">
+                <i class="fas fa-gavel"></i>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold mb-1">
+                  저당부동산의 경매의 경우
+                </h4>
+                <p class="text-base">
+                  저당권 실행으로 토지와 건물의 소유자가 달라진 경우
+                </p>
+              </div>
+            </div>
+            <!-- Type 3 -->
+            <div class="feature-item flex items-start">
+              <div class="text-blue-300 text-xl mr-3 mt-1">
+                <i class="fas fa-tree"></i>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold mb-1">
+                  입목법ㆍ가등기담보법상 법정지상권
+                </h4>
+                <p class="text-base">특별법에 의해 인정되는 법정지상권</p>
+              </div>
+            </div>
+            <!-- Type 4 -->
+            <div class="feature-item flex items-start">
+              <div class="text-blue-300 text-xl mr-3 mt-1">
+                <i class="fas fa-scroll"></i>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold mb-1">관습상의 법정지상권</h4>
+                <p class="text-base">
+                  동일인의 소유이었던 토지와 건물이 매매ㆍ강제경매 등에 의하여
+                  소유자가 달라지게 된 경우, 관습법에 의해 인정되는 법정지상권
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">35 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

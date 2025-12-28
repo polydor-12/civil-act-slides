@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>제3취득자의 보호</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .protection-method {
+        transition: all 0.3s ease;
+      }
+      .protection-method:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <h1 class="text-4xl font-bold">제3취득자의 보호</h1>
+        <div class="mt-2 text-blue-300">
+          저당권이 설정된 부동산의 제3취득자 보호방법에 대한 설명
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Definition section -->
+      <div class="absolute top-36 px-12">
+        <div class="flex items-start">
+          <div class="bg-blue-700 rounded-full p-3 mr-4">
+            <i class="fas fa-user-shield text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-2">제3취득자의 의의</h3>
+            <p class="text-lg">
+              저당권이 이미 설정된 토지 또는 건물에 대하여 소유권을 취득하거나
+              지상권ㆍ전세권 등의 용익물권을 설정받은 자
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Protection methods -->
+      <div class="absolute top-58 left-0 right-0 px-12">
+        <h3 class="text-2xl font-semibold mb-4 flex items-center">
+          <i class="fas fa-shield-alt text-blue-300 mr-3"></i>
+          보호방법
+        </h3>
+        <div class="grid grid-cols-3 gap-6 mt-6">
+          <!-- Method 1 -->
+          <div
+            class="protection-method bg-blue-800 bg-opacity-50 rounded-lg px-6 py-3 border border-blue-700"
+          >
+            <div class="text-blue-300 text-3xl mb-3 flex justify-center">
+              <i class="fas fa-gavel"></i>
+            </div>
+            <h4 class="text-2xl font-medium text-center mb-3">
+              매수인이 될 자격인정
+            </h4>
+            <p class="text-base text-lg">
+              제3취득자는 저당권 실행을 위한 경매절차에서 매수인이 될 수 있는
+              자격이 인정됨
+            </p>
+          </div>
+          <!-- Method 2 -->
+          <div
+            class="protection-method bg-blue-800 bg-opacity-50 rounded-lg px-6 py-3 border border-blue-700"
+          >
+            <div class="text-blue-300 text-3xl mb-3 flex justify-center">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <h4 class="text-2xl font-medium text-center mb-3">
+              제3취득자의 변제
+            </h4>
+            <p class="text-base text-lg">
+              피담보채권의 범위 내에서 변제가 가능하며, 변제기 후에만 변제할 수
+              있음
+            </p>
+          </div>
+          <!-- Method 3 -->
+          <div
+            class="protection-method bg-blue-800 bg-opacity-50 rounded-lg px-6 py-3 border border-blue-700"
+          >
+            <div class="text-blue-300 text-3xl mb-3 flex justify-center">
+              <i class="fas fa-exchange-alt"></i>
+            </div>
+            <h4 class="text-2xl font-medium text-center mb-3">
+              구상권 및 변제자대위
+            </h4>
+            <p class="text-base text-lg">
+              채무자에 대한 구상권을 가지며, 변제자대위에 의해 채권자의 권리를
+              당연히 이전받음
+            </p>
+          </div>
+          <!-- Method 4 -->
+          <div
+            class="protection-method bg-blue-800 bg-opacity-50 rounded-lg px-6 py-3 border border-blue-700"
+          >
+            <div class="text-blue-300 text-3xl mb-3 flex justify-center">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h4 class="text-2xl font-medium text-center mb-3">
+              비용상환청구권
+            </h4>
+            <p class="text-base text-lg">
+              제3취득자가 부동산에 지출한 필요비와 유익비에 대한 상환청구권을
+              가짐
+            </p>
+          </div>
+          <!-- Method 5 -->
+          <div
+            class="protection-method bg-blue-800 bg-opacity-50 rounded-lg px-6 py-3 border border-blue-700"
+          >
+            <div class="text-blue-300 text-3xl mb-3 flex justify-center">
+              <i class="fas fa-file-contract"></i>
+            </div>
+            <h4 class="text-2xl font-medium text-center mb-3">
+              매도인의 담보책임
+            </h4>
+            <p class="text-base text-lg">
+              매도인이 저당권의 존재를 알리지 않은 경우, 매도인의 담보책임이
+              발생함
+            </p>
+          </div>
+          <!-- Note -->
+          <div
+            class="bg-blue-700 bg-opacity-30 rounded-lg px-6 py-3 border border-blue-600 flex items-center"
+          >
+            <div class="text-blue-300 text-3xl mr-4">
+              <i class="fas fa-info-circle"></i>
+            </div>
+            <p class="text-base text-lg">
+              이러한 보호방법들은 저당권이 설정된 부동산을 취득한 제3취득자의
+              권익을 보호하기 위한 법적 장치임
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">48 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

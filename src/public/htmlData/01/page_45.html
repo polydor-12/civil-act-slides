@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>저당권</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .content-box {
+        background-color: rgba(30, 58, 138, 0.4);
+        border: 1px solid rgba(96, 165, 250, 0.3);
+        transition: all 0.3s ease;
+      }
+      .content-box:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        border-color: rgba(96, 165, 250, 0.5);
+      }
+      .req-item {
+        transition: all 0.2s ease;
+      }
+      .req-item:hover {
+        transform: translateX(5px);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <h1 class="text-4xl font-bold">저당권</h1>
+        <div class="mt-2 text-blue-300">
+          저당권의 의의와 성립요건에 대한 설명
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-32 bottom-16 left-0 right-0 px-16">
+        <div class="grid grid-cols-5 gap-8 h-full">
+          <!-- Definition section (2 columns) -->
+          <div class="col-span-2 content-box rounded-lg p-8 flex flex-col">
+            <div class="flex items-center mb-6">
+              <div class="text-blue-300 text-3xl mr-4">
+                <i class="fas fa-landmark"></i>
+              </div>
+              <h2 class="text-2xl font-bold">저당권의 의의</h2>
+            </div>
+            <p class="text-lg mb-6">
+              채무자 또는 제3자가 점유의 이전 없이 채무의 담보로 제공한 부동산에
+              대하여 채무의 변제가 없을 때 그 부동산으로부터 우선변제를 받을 수
+              있는 담보물권
+            </p>
+            <div class="bg-blue-800 bg-opacity-50 rounded p-4 mb-4">
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-blue-300 mr-3"></i>
+                <span class="font-medium">유치적 효력이 인정되지 않음</span>
+              </div>
+            </div>
+            <div class="bg-blue-800 bg-opacity-50 rounded p-4">
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-blue-300 mr-3"></i>
+                <span class="font-medium">가치권의 전형</span>
+              </div>
+            </div>
+          </div>
+          <!-- Requirements section (3 columns) -->
+          <div class="col-span-3 content-box rounded-lg p-8 flex flex-col">
+            <div class="flex items-center mb-6">
+              <div class="text-blue-300 text-3xl mr-4">
+                <i class="fas fa-clipboard-list"></i>
+              </div>
+              <h2 class="text-2xl font-bold">저당권의 성립요건</h2>
+            </div>
+            <div class="space-y-6">
+              <!-- Requirement 1 -->
+              <div class="req-item flex">
+                <div
+                  class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center mr-4"
+                >
+                  <span class="font-bold">1</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-blue-300">
+                    피담보채권
+                  </h3>
+                  <ul class="mt-2 space-y-1 text-lg">
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"
+                      ></i>
+                      <span>보통 금전채권이지만 금전채권이 아닌 것도 가능</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"
+                      ></i>
+                      <span
+                        >수 개의 채권ㆍ채권의 일부ㆍ장래 발생할 채권도
+                        가능</span
+                      >
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"
+                      ></i>
+                      <span
+                        >장래의 증감변동하는 불특정 다수의 채권을 피담보채권으로
+                        하는 근저당도 인정 (부종성 완화)</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Requirement 2 -->
+              <div class="req-item flex">
+                <div
+                  class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center mr-4"
+                >
+                  <span class="font-bold">2</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-blue-300">
+                    저당권의 목적물
+                  </h3>
+                  <ul class="mt-2 space-y-1 text-lg">
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"
+                      ></i>
+                      <span
+                        >법률상 공시가 가능한 것 - 부동산과 지상권ㆍ전세권
+                        (민법)</span
+                      >
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"
+                      ></i>
+                      <span
+                        >입목등기가 된
+                        입목ㆍ어업권ㆍ광업권ㆍ소형선박ㆍ자동차ㆍ항공기ㆍ건설기계
+                        등도 가능(특별법)</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Requirements 3 &amp; 4 -->
+              <div class="grid grid-cols-2 gap-4">
+                <div class="req-item flex">
+                  <div
+                    class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center mr-4"
+                  >
+                    <span class="font-bold">3</span>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold text-blue-300">
+                      저당권설정계약
+                    </h3>
+                    <p class="mt-2 text-lg">
+                      저당권설정자(채무자 또는 물상보증인)과 저당권자 사이의
+                      계약
+                    </p>
+                  </div>
+                </div>
+                <div class="req-item flex">
+                  <div
+                    class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center mr-4"
+                  >
+                    <span class="font-bold">4</span>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold text-blue-300">
+                      저당권설정등기
+                    </h3>
+                    <p class="mt-2 text-lg">
+                      저당권설정계약에 상응하는 등기 필요
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">45 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

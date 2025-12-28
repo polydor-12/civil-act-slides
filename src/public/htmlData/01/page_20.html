@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>물권변동</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .arrow-animation {
+        animation: arrowMove 2s infinite ease-in-out;
+      }
+      @keyframes arrowMove {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(10px);
+        }
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <div class="flex justify-between items-center">
+          <div>
+            <h1 class="text-4xl font-bold">물권변동</h1>
+            <div class="mt-2 text-blue-300">
+              물권변동의 의의와 원인에 따른 분류
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-36 bottom-16 left-0 right-0 px-16">
+        <!-- Definition section -->
+        <div class="mb-12">
+          <div class="flex items-center mb-4">
+            <div class="text-3xl text-blue-300 mr-4">
+              <i class="fas fa-info-circle"></i>
+            </div>
+            <h2 class="text-2xl font-bold">물권변동의 의의</h2>
+          </div>
+          <div class="pl-12 text-lg">
+            <p>
+              물권의 발생ㆍ변경ㆍ소멸을 의미합니다. 물권자의 측면에서 보면
+              물권의 득실변경, 즉 취득ㆍ상실ㆍ변경이 됩니다.
+            </p>
+          </div>
+        </div>
+        <!-- Classification section -->
+        <div class="grid grid-cols-2 gap-10">
+          <!-- Legal acts -->
+          <div
+            class="bg-blue-800 bg-opacity-50 rounded-lg p-8 border border-blue-700 card-hover"
+          >
+            <div class="flex items-center mb-6">
+              <div class="text-3xl text-blue-300 mr-4">
+                <i class="fas fa-file-contract"></i>
+              </div>
+              <h3 class="text-2xl font-bold">법률행위에 의한 물권변동</h3>
+            </div>
+            <div class="space-y-4 text-lg">
+              <p>법률행위에 의해 당사자의 의도대로 물권이 변동되는 경우</p>
+              <ul class="pl-6 space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+                  <span>물권변동을 일으키는 법률행위는 물권행위입니다.</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+                  <span
+                    >부동산의 경우에는
+                    <span class="font-semibold text-blue-200">등기</span>,
+                    동산의 경우에는
+                    <span class="font-semibold text-blue-200">인도</span>가
+                    필요합니다.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Legal provisions -->
+          <div
+            class="bg-blue-800 bg-opacity-50 rounded-lg p-8 border border-blue-700 card-hover"
+          >
+            <div class="flex items-center mb-6">
+              <div class="text-3xl text-blue-300 mr-4">
+                <i class="fas fa-balance-scale"></i>
+              </div>
+              <h3 class="text-2xl font-bold">법률규정에 의한 물권변동</h3>
+            </div>
+            <div class="space-y-4 text-lg">
+              <p>법률의 규정에 따라 물권이 변동되는 경우</p>
+              <ul class="pl-6 space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+                  <span
+                    >소멸시효ㆍ취득시효ㆍ혼동ㆍ무주물선점ㆍ유실물습득ㆍ매장물발견ㆍ첨부ㆍ상속
+                    등</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+                  <span>등기나 인도 없이도 물권변동이 일어납니다.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom diagram -->
+        <div class="flex justify-center mt-10">
+          <div class="flex items-center">
+            <div
+              class="text-center px-6 py-3 rounded-lg bg-blue-700 bg-opacity-70"
+            >
+              <div class="text-2xl mb-1">
+                <i class="fas fa-arrow-right"></i>
+              </div>
+              <div>발생</div>
+            </div>
+            <div
+              class="text-center px-6 ml-6 py-3 rounded-lg bg-blue-700 bg-opacity-70"
+            >
+              <div class="text-2xl mb-1">
+                <i class="fas fa-exchange-alt"></i>
+              </div>
+              <div>변경</div>
+            </div>
+            <div
+              class="text-center px-6 ml-6 py-3 rounded-lg bg-blue-700 bg-opacity-70"
+            >
+              <div class="text-2xl mb-1"><i class="fas fa-ban"></i></div>
+              <div>소멸</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">20 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

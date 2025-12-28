@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>토지소유권</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .land-visualization {
+        height: 300px;
+        position: relative;
+      }
+      .sky {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: linear-gradient(
+          to bottom,
+          rgba(66, 153, 225, 0.3),
+          rgba(66, 153, 225, 0.1)
+        );
+        border-top: 1px dashed rgba(255, 255, 255, 0.5);
+      }
+      .surface {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: linear-gradient(
+          to bottom,
+          rgba(66, 153, 225, 0.1),
+          rgba(26, 54, 93, 0.5)
+        );
+        border-top: 2px solid rgba(255, 255, 255, 0.8);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+      }
+      .underground {
+        position: absolute;
+        top: 200px;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: linear-gradient(
+          to bottom,
+          rgba(26, 54, 93, 0.5),
+          rgba(26, 54, 93, 0.3)
+        );
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <div class="flex justify-between items-center">
+          <div>
+            <h1 class="text-4xl font-bold">토지소유권</h1>
+            <div class="mt-2 text-blue-300">
+              토지소유권의 범위와 경계에 대한 설명
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-36 bottom-16 left-0 right-0 px-16 flex">
+        <!-- Left section: Scope of land ownership -->
+        <div class="w-1/2 pr-8">
+          <div class="mb-7">
+            <h3 class="text-2xl font-bold mb-4 flex items-center">
+              <i class="fas fa-expand-alt text-blue-300 mr-3"></i>
+              토지소유권의 범위
+            </h3>
+            <div class="space-y-3 text-lg">
+              <p class="ml-8">
+                토지소유권은
+                <span class="text-blue-300 font-semibold"
+                  >토지의 정당한 이익이 있는 범위 내</span
+                >에서 토지의 상하에 미침
+              </p>
+              <ul class="space-y-2 ml-8">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-blue-300 mt-1.5 mr-2"></i>
+                  <span
+                    >지하수, 암석, 모래, 건물 이외의 공작물은 토지의 일부</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-blue-300 mt-1.5 mr-2"></i>
+                  <span
+                    >미채굴 광물: 국가가 채굴취득권을 가짐 (국가소유 -
+                    다수설)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Land visualization -->
+          <div
+            class="land-visualization mx-8 border border-blue-700 rounded-lg overflow-hidden"
+          >
+            <div class="sky flex items-center justify-center">
+              <div class="flex flex-col items-center w-20">
+                <i class="fas fa-cloud text-2xl"></i>
+                <div class="text-sm mt-1">상공 이용권</div>
+              </div>
+            </div>
+            <div class="surface flex items-center justify-between px-4">
+              <div class="flex flex-col items-center w-20 space-y-1">
+                <i class="fas fa-home text-2xl"></i>
+                <div class="text-sm">공작물</div>
+              </div>
+              <div class="flex flex-col items-center w-20 space-y-1">
+                <i class="fas fa-tree text-2xl"></i>
+                <div class="text-sm">지표</div>
+              </div>
+              <div class="flex flex-col items-center w-20 space-y-1">
+                <i class="fas fa-road text-2xl"></i>
+                <div class="text-sm">도로</div>
+              </div>
+            </div>
+
+            <div class="underground flex items-center justify-between px-4">
+              <div class="flex flex-col items-center w-20 space-y-1">
+                <i class="fas fa-water text-2xl"></i>
+                <div class="text-sm">지하수</div>
+              </div>
+              <div class="flex flex-col items-center w-20 space-y-1">
+                <i class="fas fa-cubes text-2xl"></i>
+                <div class="text-sm">암석, 모래</div>
+              </div>
+              <div class="flex flex-col items-center w-20 space-y-1">
+                <i class="fas fa-gem text-2xl text-yellow-400"></i>
+                <div class="text-sm">광물(국가)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Right section: Land boundaries -->
+        <div class="w-1/2 pl-8 border-l border-blue-700">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold mb-4 flex items-center">
+              <i class="fas fa-border-all text-blue-300 mr-3"></i>
+              토지의 경계
+            </h3>
+            <div class="space-y-5 text-lg">
+              <p class="ml-8">
+                토지는 1필지를 단위로
+                <span class="text-blue-300 font-semibold mb-5"
+                  >소재 · 지번 · 지목 · 면적 · 경계 또는 좌표</span
+                >
+                등을 조사·측량하여 지적공부에 등록되고 부동산 등기부에 기록됨
+              </p>
+              <p class="ml-8">
+                즉, 1필지의 토지가 하나의 물건으로 취급됨<br />
+              </p>
+              <div
+                class="bg-blue-800 bg-opacity-50 p-6 rounded-lg border border-blue-700 ml-8"
+              >
+                <div class="text-xl font-semibold mb-5 flex items-center">
+                  <i class="fas fa-exclamation-circle text-yellow-400 mr-2"></i>
+                  현실 경계와 공부상 경계가 일치하지 않는 경우
+                </div>
+                <p class="mb-5">
+                  현실의 경계와 공부상의 경계가 불일치하는 경우 소유권의 범위는
+                  <span class="text-yellow-400 font-semibold"
+                    >공부상의 경계에 따라 확정</span
+                  >됨
+                </p>
+                <div class="flex items-center space-x-4 mt-4 py-3">
+                  <div
+                    class="flex-1 text-center px-3 py-6 bg-blue-900 bg-opacity-50 rounded-lg border border-blue-600"
+                  >
+                    <i class="fas fa-map-marked-alt text-2xl mb-2"></i>
+                    <div>실제 경계</div>
+                  </div>
+                  <div class="text-2xl pr-3">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                  <div
+                    class="flex-1 text-center px-3 py-6 bg-blue-900 bg-opacity-50 rounded-lg border border-blue-600"
+                  >
+                    <i class="fas fa-file-contract text-2xl mb-2"></i>
+                    <div>공부상 경계</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">24 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

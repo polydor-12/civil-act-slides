@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>저당권의 효력</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .content-card {
+        transition: all 0.3s ease;
+        background-color: rgba(26, 54, 93, 0.7);
+        border: 1px solid rgba(66, 153, 225, 0.3);
+      }
+      .list-item {
+        position: relative;
+        padding-left: 1.75rem;
+      }
+      .list-item:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.75rem;
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background-color: #4299e1;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <div class="flex justify-between items-center">
+          <div>
+            <h1 class="text-4xl font-bold">저당권의 효력</h1>
+            <div class="mt-2 text-blue-300">
+              저당권의 피담보채권 범위와 목적물에 대한 효력
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-36 bottom-16 left-0 right-0 px-12">
+        <div class="grid grid-cols-2 gap-8 h-full">
+          <!-- Left column: 피담보채권의 범위 -->
+          <div class="content-card rounded-lg p-8">
+            <div class="flex items-center mt-2 mb-6">
+              <div class="text-blue-300 text-3xl mr-4">
+                <i class="fas fa-file-invoice-dollar"></i>
+              </div>
+              <h3 class="text-2xl font-bold">피담보채권의 범위</h3>
+            </div>
+            <ul class="space-y-4 text-xl">
+              <li class="list-item">원본, 이자, 위약금, 저당권 실행비용</li>
+              <li class="list-item">채무불이행으로 인한 손해배상</li>
+            </ul>
+            <div
+              class="mt-6 px-4 py-2 bg-blue-800 bg-opacity-50 rounded-lg border border-blue-700"
+            >
+              <div class="flex items-start">
+                <div class="text-yellow-300 text-xl mr-3">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div>
+                  <p class="text-xl font-medium text-yellow-100">
+                    지연배상의 경우
+                  </p>
+                  <p class="ml-2 mt-1 text-lg">
+                    원본의 이행기일 경과 후
+                    <span class="font-bold text-yellow-100">1년분</span>에
+                    한하여 우선변제를 받을 수 있음
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center mt-10 mb-6">
+              <div class="text-blue-300 text-3xl mr-4">
+                <i class="fas fa-home"></i>
+              </div>
+              <h3 class="text-2xl font-bold">목적물에 대한 효력 범위</h3>
+            </div>
+
+            <ul class="space-y-4 text-lg mb-6">
+              <li class="list-item">부합물, 종물에 효력이 미침</li>
+              <li class="list-item">
+                토지에 대한 저당권의 효력은 건물에 미치지 않음
+              </li>
+            </ul>
+          </div>
+          <!-- Right column: 목적물에 대한 효력 범위 -->
+          <div class="content-card rounded-lg p-8">
+            <div
+              class="p-4 bg-blue-800 bg-opacity-50 rounded-lg border border-blue-700"
+            >
+              <div class="flex items-center">
+                <div class="text-green-300 text-xl mr-3">
+                  <i class="fas fa-arrow-down"></i>
+                </div>
+                <div>
+                  <p class="mb-2 text-xl">건물 건축 전 토지저당권 설정</p>
+                  <p class="ml-2 mt-1 text-lg">
+                    토지저당권이 실행되면 건물은 철거될 수 있음 <br />
+                    저당권자의 일괄경매청구권 인정
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-6 p-4 bg-blue-800 bg-opacity-50 rounded-lg border border-blue-700"
+            >
+              <div class="flex items-center">
+                <div class="text-green-300 text-xl mr-3">
+                  <i class="fas fa-arrow-up"></i>
+                </div>
+                <div>
+                  <p class="mb-2 text-xl">건물 건축 후 토지저당권 설정</p>
+                  <p class="ml-2 mt-1 text-lg">
+                    토지저당권이 실행되면 건물소유자에게 법정지상권 인정
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-6 p-4 bg-blue-800 bg-opacity-50 rounded-lg border border-blue-700"
+            >
+              <div class="flex items-center">
+                <div class="text-green-300 text-xl mr-3">
+                  <i class="fas fa-gavel"></i>
+                </div>
+                <div>
+                  <p class="mb-2 text-xl">우선변제적 효력</p>
+                  <p class="ml-2 mt-1 text-lg">
+                    저당권자는 채무자가 변제기에 변제하지 않으면 저당목적물을
+                    현금화하여 그 대금에서 다른 채권자보다 우선하여 변제를 받을
+                    수 있음
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">46 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

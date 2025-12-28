@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>매도인의 담보책임</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #60a5fa;
+      }
+      .section-icon {
+        background-color: rgba(37, 99, 235, 0.3);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      /* .{
+        position: relative;
+        padding-left: 20px;
+      }
+      :before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #60a5fa;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative">
+      <!-- Decorative elements -->
+      <div
+        class="absolute top-0 right-0 w-48 h-48 bg-blue-400 opacity-10 rounded-bl-full"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-64 h-64 bg-blue-300 opacity-10 rounded-tr-full"
+      ></div>
+      <!-- Header -->
+      <div class="w-full py-6 px-12 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">
+          매도인의 담보책임
+        </h1>
+      </div>
+      <!-- Main content -->
+      <div class="flex-1 px-8 py-5 grid grid-cols-2 gap-6 text-xl">
+        <!-- Left column -->
+        <div class="flex flex-col gap-6">
+          <!-- Section 1 -->
+          <div>
+            <div class="flex items-center mb-3">
+              <div class="section-icon mr-3">
+                <i class="fas fa-info-circle text-white"></i>
+              </div>
+              <h2 class="text-2xl font-semibold text-blue-100">
+                담보책임의 의의
+              </h2>
+            </div>
+            <div class="content-box rounded-md p-4 ml-10 space-y-4">
+              <p class="text-white mb-2">
+                ㆍ매매의 유상성에 기초하여 매도인의 고의ㆍ과실과 <br />
+                <span class="pl-4.5"></span>관계없이 인정되는 무과실책임
+              </p>
+              <p class="text-white mb-2">ㆍ본질은 채무불이행(다수설, 판례)</p>
+              <p class="text-white">
+                ㆍ일반적으로 매수인이 선의의 경우에 한하여 인정됨
+              </p>
+            </div>
+          </div>
+          <!-- Section 2 -->
+          <div>
+            <div class="flex items-center mb-3">
+              <div class="section-icon mr-3">
+                <i class="fas fa-exclamation-triangle text-white"></i>
+              </div>
+              <h2 class="text-2xl font-semibold text-blue-100">권리의 하자</h2>
+            </div>
+            <div class="content-box rounded-md p-4 ml-10 space-y-4">
+              <p class="text-white mb-2">
+                ㆍ권리의 전부가 타인에게 속하는 경우
+              </p>
+              <p class="text-white mb-2">
+                ㆍ권리의 일부가 타인에게 속하는 경우
+              </p>
+              <p class="text-white mb-2">ㆍ목적물의 수량부족, 일부멸실</p>
+              <p class="text-white mb-2">
+                ㆍ권리가 타인의 용익적 권리에 의해 제한을 받는 경우
+              </p>
+              <p class="text-white">
+                ㆍ저당권, 전세권의 행사로 소유권을 취득할 수 없거나 <br />
+                <span class="pl-4.5"></span> 상실한 경우
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Right column -->
+        <div class="flex flex-col gap-6">
+          <!-- Section 3 -->
+          <div>
+            <div class="flex items-center mb-3">
+              <div class="section-icon mr-3">
+                <i class="fas fa-tools text-white"></i>
+              </div>
+              <h2 class="text-2xl font-semibold text-blue-100">물건의 하자</h2>
+            </div>
+            <div class="content-box rounded-md p-4 ml-10">
+              <!-- <p class="text-white mb-3">
+                매매 목적물인 물건에 하자가 있는 경우
+              </p> -->
+
+              <p class="text-white mb-3">
+                ㆍ물건의 하자 : 거래통념상 기대되는 객관적 성질ㆍ성능 <br />
+                <span class="pl-4.5"></span>을 결여하거나, 당사자가 예정 또는
+                보증한 성질을 결 <br />
+                <span class="pl-4.5"></span>여한 경우
+              </p>
+              <p class="text-white mb-4">
+                ㆍ매매 목적물인 권리에 법률적 흠결이 존재하여 <br />
+                <span class="pl-4.5"></span>매수인이 매매계약의 목적을 달성할 수
+                없는 경우
+              </p>
+              <div class="flex gap-4">
+                <div class="flex-1 bg-blue-800 bg-opacity-30 p-3 rounded">
+                  <p class="text-blue-200 font-medium mb-1">특정물의 하자</p>
+                  <p class="text-white">개별적으로 특정된 물건의 하자</p>
+                </div>
+                <div class="flex-1 bg-blue-800 bg-opacity-30 p-3 rounded">
+                  <p class="text-blue-200 font-medium mb-1">종류물의 하자</p>
+                  <p class="text-white">종류와 수량으로 정해진 물건의 하자</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Section 4 -->
+
+          <div>
+            <div class="flex items-center mb-3">
+              <div class="section-icon mr-3">
+                <i class="fas fa-clipboard-list text-white"></i>
+              </div>
+              <h2 class="text-2xl font-semibold text-blue-100">
+                담보책임의 내용
+              </h2>
+            </div>
+            <div class="content-box rounded-md px-4 py-3 ml-10">
+              <div class="flex items-center mb-1">
+                <div
+                  class="w-8 h-8 bg-blue-600 bg-opacity-40 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="fas fa-times-circle text-white"></i>
+                </div>
+                <p class="text-white">
+                  <span class="text-blue-200 font-medium">계약해제권:</span>
+                  계약의 목적달성이 불능인 경우
+                </p>
+              </div>
+              <div class="flex items-center mb-1">
+                <div
+                  class="w-8 h-8 bg-blue-600 bg-opacity-40 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="fas fa-hand-holding-usd text-white"></i>
+                </div>
+                <p class="text-white">
+                  <span class="text-blue-200 font-medium">손해배상청구권:</span>
+                  하자로 인한 손해에 대한 배상
+                </p>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-8 h-8 bg-blue-600 bg-opacity-40 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="fas fa-percentage text-white"></i>
+                </div>
+                <p class="text-white">
+                  <span class="text-blue-200 font-medium">대금감액청구권:</span>
+                  일부 타인의 권리의 경우
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">19 / 32</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>공동소유</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .ownership-card {
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+      .ownership-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .icon-container {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <div class="flex justify-between items-center">
+          <div>
+            <h1 class="text-4xl font-bold">공동소유</h1>
+            <div class="mt-2 text-blue-300">
+              공유, 합유, 총유 등 공동소유의 형태에 대한 설명
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-40 bottom-16 left-0 right-0 px-12">
+        <div class="grid grid-cols-3 gap-6 h-full">
+          <!-- 공유 (Co-ownership) -->
+          <div
+            class="ownership-card bg-blue-800 bg-opacity-50 rounded-lg px-6 py-11 flex flex-col border border-blue-700"
+          >
+            <div class="flex items-center mb-4">
+              <div class="icon-container bg-blue-700">
+                <i class="fas fa-users text-4xl text-blue-300"></i>
+              </div>
+              <h3 class="text-2xl font-bold ml-4">공유</h3>
+            </div>
+            <div class="text-lg space-y-4 flex-grow">
+              <p class="border-l-4 border-blue-400 pl-3 mt-2 mb-1">
+                가장 일반적이고 개인적인 공동소유의 형태
+              </p>
+              <div class="mt-4">
+                <p class="flex items-start">
+                  <i class="fas fa-check-circle text-blue-300 mr-3 mt-1"></i>
+                  <span>공유자는 물건에 대한 <strong>지분</strong>을 가짐</span>
+                </p>
+                <p class="flex items-start mt-2">
+                  <i class="fas fa-check-circle text-blue-300 mr-3 mt-1"></i>
+                  <span>지분을 자유롭게 처분할 수 있음</span>
+                </p>
+                <p class="flex items-start mt-2">
+                  <i class="fas fa-check-circle text-blue-300 mr-3 mt-1"></i>
+                  <span>언제든지 공유물의 분할 청구가 가능함</span>
+                </p>
+              </div>
+            </div>
+            <div class="mt-4 text-sm text-blue-300">
+              <div class="flex items-center">
+                <i class="fas fa-lightbulb mr-2"></i>
+                <span>개인의 자유로운 지분 행사가 특징</span>
+              </div>
+            </div>
+          </div>
+          <!-- 합유 (Partnership ownership) -->
+          <div
+            class="ownership-card bg-blue-800 bg-opacity-50 rounded-lg px-6 py-11 flex flex-col border border-blue-700"
+          >
+            <div class="flex items-center mb-4">
+              <div class="icon-container bg-blue-700">
+                <i class="fas fa-handshake text-4xl text-blue-300"></i>
+              </div>
+              <h3 class="text-2xl font-bold ml-4">합유</h3>
+            </div>
+            <div class="text-lg space-y-4 flex-grow">
+              <p class="border-l-4 border-blue-400 pl-3 mt-2 mb-1">
+                조합의 소유형태
+              </p>
+              <div class="mt-4">
+                <p class="flex items-start">
+                  <i class="fas fa-check-circle text-blue-300 mr-3 mt-1"></i>
+                  <span
+                    >조합원은 조합재산에 대하여 <strong>지분</strong>을
+                    가짐</span
+                  >
+                </p>
+                <p class="flex items-start mt-2">
+                  <i class="fas fa-check-circle text-blue-300 mr-3 mt-1"></i>
+                  <span
+                    >합유자 <strong>전원의 동의</strong> 없이는 지분을 처분할 수
+                    없음</span
+                  >
+                </p>
+                <p class="flex items-start mt-2">
+                  <i class="fas fa-check-circle text-blue-300 mr-3 mt-1"></i>
+                  <span>조합관계가 종료할 때까지 합유물 분할청구 불가</span>
+                </p>
+              </div>
+            </div>
+            <div class="mt-4 text-sm text-blue-300">
+              <div class="flex items-center">
+                <i class="fas fa-lightbulb mr-2"></i>
+                <span>공동체의 합의가 중요한 소유형태</span>
+              </div>
+            </div>
+          </div>
+          <!-- 총유 (Collective ownership) -->
+          <div
+            class="ownership-card bg-blue-800 bg-opacity-50 rounded-lg px-6 py-11 flex flex-col border border-blue-700"
+          >
+            <div class="flex items-center mb-4">
+              <div class="icon-container bg-blue-700">
+                <i class="fas fa-building text-4xl text-blue-300"></i>
+              </div>
+              <h3 class="text-2xl font-bold ml-4">총유</h3>
+            </div>
+            <div class="text-lg space-y-4 flex-grow">
+              <p class="border-l-4 border-blue-400 pl-3 mt-2 mb-1">
+                비법인사단의 사원이 집합체로서 물건을 소유하는 형태
+              </p>
+              <div class="mt-4">
+                <p class="flex items-start">
+                  <i class="fas fa-check-circle text-blue-300 mr-3 mt-1"></i>
+                  <span
+                    >공유·합유와 달리
+                    <strong>지분이 인정되지 않음</strong></span
+                  >
+                </p>
+                <p class="flex items-start mt-2">
+                  <i class="fas fa-check-circle text-blue-300 mr-3 mt-1"></i>
+                  <span
+                    >사원의 자격을 취득하면 총유물에 관한 권리를 취득함</span
+                  >
+                </p>
+                <p class="flex items-start mt-2">
+                  <i class="fas fa-check-circle text-blue-300 mr-3 mt-1"></i>
+                  <span>자격을 잃으면 그 권리를 상실함</span>
+                </p>
+              </div>
+            </div>
+            <div class="mt-4 text-sm text-blue-300">
+              <div class="flex items-center">
+                <i class="fas fa-lightbulb mr-2"></i>
+                <span>구성원 자격에 따른 소유형태</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Visualization of ownership relationships -->
+      <div
+        class="absolute bottom-24 left-0 right-0 flex justify-center"
+        id="ownership-viz"
+      >
+        <script>
+          // D3.js visualization would go here if needed
+          // For this content, icons and text are sufficient
+        </script>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">31 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

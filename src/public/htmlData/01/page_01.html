@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>민법 (총칙, 물권)</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in {
+        animation: fadeIn 1s ease-out forwards;
+      }
+      .animate-delay-1 {
+        animation-delay: 0.2s;
+      }
+      .animate-delay-2 {
+        animation-delay: 0.4s;
+      }
+      .animate-delay-3 {
+        animation-delay: 0.6s;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 flex flex-col items-center justify-center text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Decorative elements -->
+      <div
+        class="absolute top-0 left-0 w-40 h-40 border-t-4 border-l-4 border-blue-300 opacity-30"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-40 h-40 border-b-4 border-r-4 border-blue-300 opacity-30"
+      ></div>
+      <!-- Main content -->
+      <div class="z-10 text-center px-16">
+        <div class="mb-4 animate-fade-in">
+          <h1 class="text-6xl font-bold mb-6">민 법</h1>
+          <div class="text-4xl font-medium mb-8">(총칙, 물권)</div>
+        </div>
+        <div
+          class="flex justify-center items-center mb-16 animate-fade-in animate-delay-1"
+        >
+          <div class="w-20 h-px bg-blue-300"></div>
+          <div class="mx-6 text-7xl text-blue-300">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <div class="w-20 h-px bg-blue-300"></div>
+        </div>
+        <div class="mb-6 animate-fade-in animate-delay-2">
+          <p class="text-3xl font-medium">장 민</p>
+        </div>
+        <div class="mb-10 animate-fade-in animate-delay-2">
+          <p class="text-xl font-medium">창원대 법학과 교수</p>
+        </div>
+        <div class="animate-fade-in animate-delay-3">
+          <div class="flex flex-col items-center">
+            <div class="mb-1 text-blue-200">Report Generate Date</div>
+            <div class="text-xl">2026-01-16</div>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom information -->
+      <div
+        class="absolute bottom-8 text-center animate-fade-in animate-delay-3"
+      >
+        <div class="text-sm text-blue-200">
+          제1강 민법의 개요 · 제2강 물권(점유권·소유권) · 제3강
+          제한물권(용익물권ㆍ담보물권)
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

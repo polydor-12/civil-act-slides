@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>채무불이행의 효과 - 강제이행</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .enforcement-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #60a5fa;
+        transition: all 0.2s ease;
+      }
+      .enforcement-box:hover {
+        transform: translateX(5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      .icon-circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative">
+      <div
+        class="absolute bottom-0 left-0 w-64 h-64 bg-blue-400 opacity-10 rounded-tr-full"
+      ></div>
+      <div
+        class="absolute top-0 right-0 w-48 h-48 bg-blue-300 opacity-10 rounded-bl-full"
+      ></div>
+
+      <!-- Header -->
+      <div class="w-full py-6 px-12 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">
+          채무불이행의 효과 - 강제이행
+        </h1>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 px-10 pt-4 pb-11 flex flex-col text-xl">
+        <!-- Introduction -->
+        <div class="enforcement-box rounded-md px-4 py-2 mb-4">
+          <div class="flex items-center">
+            <div class="icon-circle bg-blue-600 mr-3">
+              <i class="fas fa-angle-right text-white text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-100">
+              강제이행의 의의
+            </h3>
+          </div>
+          <div
+            class="content-box bg-blue-800 bg-opacity-30 rounded-md px-4 pt-2 pb-1"
+          >
+            <p class="text-white text-xl leading-loose">
+              <i class="fas fa-info-circle mr-2 text-blue-300"></i>
+              채무자가 채무의 이행이 가능함에도 임의로 이행하지 않는 경우,
+              채권자가 국가권력에 의하여 강제로 채권의 내용을
+            </p>
+            <p class="pl-9 text-white">
+              실현하는 것<span class="text-blue-200 mt-2 ml-6"
+                >※ 이행불능의 경우에는 불가하며, 강제이행 청구는 손해배상 청구에
+                영향을 미치지 않음</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <!-- Types of enforcement -->
+        <div class="flex-1 grid grid-cols-2 gap-4">
+          <!-- Direct Enforcement -->
+          <div class="enforcement-box rounded-md px-4 py-2">
+            <div class="flex items-center mb-3">
+              <div class="icon-circle bg-blue-600 mr-3">
+                <i class="fas fa-gavel text-white text-xl"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-blue-100">직접강제</h3>
+            </div>
+            <ul class="text-white space-y-2 ml-4">
+              <li>
+                <i class="fas fa-angle-right text-blue-300 mr-2"></i> 국가기관이
+                채무자의 의사와 관계없이 채권의 내용을 <br />
+                <span class="pl-6">그대로 실현</span>
+              </li>
+              <li>
+                <i class="fas fa-angle-right text-blue-300 mr-2"></i>
+                <span class="text-blue-200 font-medium">주는 채무</span>의
+                경우에만 허용
+              </li>
+              <li>
+                <i class="fas fa-angle-right text-blue-300 mr-2"></i> 직접강제가
+                인정되면 대체집행 또는 간접강제 불허
+              </li>
+            </ul>
+          </div>
+          <!-- Substitute Performance -->
+          <div class="enforcement-box rounded-md px-4 py-2">
+            <div class="flex items-center mb-3">
+              <div class="icon-circle bg-blue-500 mr-3">
+                <i class="fas fa-people-carry text-white text-xl"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-blue-100">대체집행</h3>
+            </div>
+            <ul class="text-white space-y-2 ml-4">
+              <li>
+                <i class="fas fa-angle-right text-blue-300 mr-2"></i> 채권자
+                또는 제3자가 채무자 대신 채권 내용 실현, 비용은 <br />
+                <span class="pl-6">채무자 부담</span>
+              </li>
+              <li>
+                <i class="fas fa-angle-right text-blue-300 mr-2"></i>
+                <span class="text-blue-200 font-medium">대체적 작위</span>를
+                목적으로 하는 채무에 적용
+              </li>
+              <li>
+                <i class="fas fa-angle-right text-blue-300 mr-2"></i>
+                부작위의무위반으로 발생된 결과 제거 필요시에도 적용
+              </li>
+            </ul>
+          </div>
+          <!-- Indirect Enforcement -->
+          <div class="enforcement-box rounded-md px-4 py-2">
+            <div class="flex items-center mb-3">
+              <div class="icon-circle bg-blue-400 mr-3">
+                <i class="fas fa-hand-holding-usd text-white text-xl"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-blue-100">간접강제</h3>
+            </div>
+            <ul class="text-white space-y-2 ml-4">
+              <li>
+                <i class="fas fa-angle-right text-blue-300 mr-2"></i> 손해배상
+                지급명령, 벌금부과, 구금 등으로 심리적 압박
+              </li>
+              <li>
+                <i class="fas fa-angle-right text-blue-300 mr-2"></i>
+                <span class="text-blue-200 font-medium">부대체적 작위</span>
+                채무에 한하여 허용
+              </li>
+              <li>
+                <i class="fas fa-angle-right text-blue-300 mr-2"></i> 채무자의
+                자유의사 또는 인격존중에 반하는 경우 불허
+              </li>
+            </ul>
+          </div>
+          <!-- Enforcement of Obligation to Express Intention -->
+          <div class="enforcement-box rounded-md px-4 py-2">
+            <div class="flex items-center mb-3">
+              <div class="icon-circle bg-blue-300 mr-3">
+                <i class="fas fa-comment-dots text-white text-xl"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-blue-100">
+                의사표시 의무의 집행
+              </h3>
+            </div>
+            <ul class="text-white space-y-2 ml-4">
+              <li>
+                <i class="fas fa-angle-right text-blue-300 mr-2"></i> 채무자가
+                의사표시 의무를 이행하지 않는 경우 적용
+              </li>
+              <li>
+                <i class="fas fa-angle-right text-blue-300 mr-2"></i> 채권자는
+                채무자의 의사표시에 갈음하는 재판 청구 가능
+              </li>
+              <li>
+                <i class="fas fa-angle-right text-blue-300 mr-2"></i> 의사표시
+                외에 준법률행위의 경우에도 인정
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">10 / 32</p>
+      </div>
+    </div>
+  </body>
+</html>

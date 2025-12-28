@@ -1,0 +1,25 @@
+{
+  "name": "civil-act-slides",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "vite.config.js",
+  "scripts": {
+    "build": "tsc && vite build && firebase deploy && git add . && git commit -m 'first Commit' && git push -u origin main",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "firebase": "^12.6.0",
+    "jsdom": "^27.0.1",
+    "vite": "^7.3.0"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^27.0.0",
+    "@types/node": "^25.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

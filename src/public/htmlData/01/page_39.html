@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>담보물권 – 유치권·질권·저당권</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .security-card {
+        transition: all 0.3s ease;
+      }
+      .security-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <div class="flex justify-between items-center">
+          <div class="flex">
+            <h1 class="text-4xl font-bold">
+              담보물권 - 유치권 · 질권 · 저당권
+            </h1>
+            <div class="w-3"></div>
+            <div class="mt-2 text-blue-300">
+              담보물권의 의의와 종류에 대한 소개
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-27 bottom-16 left-0 right-0 px-16">
+        <!-- Introduction to Security Rights -->
+        <div class="mb-4">
+          <h2 class="text-2xl font-semibold mb-4 flex items-center">
+            <i class="fas fa-shield-alt text-blue-300 mr-3"></i>
+            담보의 의의
+          </h2>
+          <p class="text-lg pl-8">
+            채무자가 채무를 이행하지 않거나 이행할 수 없게 되는 경우를 대비해
+            채무자의 변제를 미리 확보하여 채권자의 위험을 줄임으로써 채권자가
+            채권의 만족을 얻을 가능성을 높이는 수단
+          </p>
+        </div>
+        <!-- Types of Security -->
+        <div class="grid grid-cols-2 gap-8 mb-5">
+          <!-- Personal Security -->
+          <div
+            class="security-card bg-blue-800 bg-opacity-50 rounded-lg px-5 py-2 border border-blue-700"
+          >
+            <h3 class="text-xl font-bold mb-3 flex items-center">
+              <i class="fas fa-user-shield text-blue-300 mr-3 text-2xl"></i>
+              인적 담보
+            </h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+                <span>보증채무ㆍ연대채무</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+                <span>제3자의 일반재산까지 책임재산으로 함</span>
+              </li>
+              <li class="flex items-start">
+                <i
+                  class="fas fa-exclamation-circle text-yellow-300 mt-1 mr-2"
+                ></i>
+                <span>담보하는 자의 재산상태에 따라 담보의 효력이 좌우됨</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Real Security -->
+          <div
+            class="security-card bg-blue-800 bg-opacity-50 rounded-lg px-5 py-2 border border-blue-700"
+          >
+            <h3 class="text-xl font-bold mb-3 flex items-center">
+              <i class="fas fa-home text-blue-300 mr-3 text-2xl"></i>
+              물적 담보
+            </h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+                <span
+                  >채무자 또는 제3자(물상보증인)의 특정한 물건으로부터
+                  변제</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+                <span>다른 일반채권자보다 우선하여 변제받을 수 있음</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-plus-circle text-green-300 mt-1 mr-2"></i>
+                <span>물건의 객관적 가치에 따라 담보가 가능함</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Types of Security Rights -->
+        <div class="mb-6">
+          <h2 class="text-2xl font-semibold mb-4 flex items-center">
+            <i class="fas fa-list-ul text-blue-300 mr-3"></i>
+            담보물권의 종류
+          </h2>
+          <div class="grid grid-cols-3 gap-6">
+            <!-- Right of Retention -->
+            <div
+              class="security-card bg-blue-800 bg-opacity-30 rounded-lg p-2 border border-blue-700"
+            >
+              <div class="flex items-center mb-3">
+                <div class="bg-blue-700 rounded-full p-3 mr-3">
+                  <i class="fas fa-hand-holding text-2xl"></i>
+                </div>
+                <h4 class="text-xl font-bold">유치권</h4>
+              </div>
+              <p>
+                타인의 물건 또는 유가증권을 점유한 자가 그와 관련하여 발생한
+                채권을 변제받을 때까지 물건을 유치할 수 있는 법정담보물권
+              </p>
+            </div>
+            <!-- Pledge -->
+            <div
+              class="security-card bg-blue-800 bg-opacity-30 rounded-lg p-2 border border-blue-700"
+            >
+              <div class="flex items-center mb-3">
+                <div class="bg-blue-700 rounded-full p-3 mr-3">
+                  <i class="fas fa-box-open text-2xl"></i>
+                </div>
+                <h4 class="text-xl font-bold">질권</h4>
+              </div>
+              <p>
+                채권자가 채권의 담보를 위해 인도받은 동산이나 재산권을 유치하고
+                변제가 없을 경우 우선변제를 받는 담보물권
+              </p>
+            </div>
+            <!-- Mortgage -->
+            <div
+              class="security-card bg-blue-800 bg-opacity-30 rounded-lg p-2 border border-blue-700"
+            >
+              <div class="flex items-center mb-3">
+                <div class="bg-blue-700 rounded-full p-3 mr-3">
+                  <i class="fas fa-building text-2xl"></i>
+                </div>
+                <h4 class="text-xl font-bold">저당권</h4>
+              </div>
+              <p>
+                채무자 또는 제3자가 점유 이전 없이 담보로 제공한 부동산에 대하여
+                변제가 없을 때 우선변제를 받는 담보물권
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Non-typical Security Rights -->
+        <div>
+          <h2 class="text-2xl font-semibold mb-2 flex items-center">
+            <i class="fas fa-lightbulb text-yellow-300 mr-3"></i>
+            비전형담보
+          </h2>
+          <p class="text-lg pl-8">
+            가등기담보권, 양도담보권 등도 인정됨 (가등기담보법)
+          </p>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">39 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

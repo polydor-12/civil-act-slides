@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>계약의 효력</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #60a5fa;
+      }
+      .effect-card {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+      .effect-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      }
+      .icon-container {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(37, 99, 235, 0.4);
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative">
+      <!-- Decorative elements -->
+      <div
+        class="absolute top-0 right-0 w-56 h-56 bg-blue-400 opacity-10 rounded-bl-full"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-72 h-72 bg-blue-300 opacity-10 rounded-tr-full"
+      ></div>
+      <!-- Header -->
+      <div class="w-full py-6 px-12 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">계약의 효력</h1>
+      </div>
+      <!-- Introduction -->
+      <div class="px-12 pt-8">
+        <div class="content-box rounded-md p-4 mb-8">
+          <p class="text-white text-xl">
+            <span class="font-semibold text-blue-200">계약의 효력</span>이란
+            계약이 유효하게 성립함에 따라서 계약당사자들에게 발생하는 법적
+            효과로, 당사자들이 합의한 계약의 내용에 따라 결정됩니다. 민법은
+            쌍무계약에 공통적으로 인정될 수 있는 효력을 규정하고 있습니다.
+          </p>
+        </div>
+      </div>
+      <!-- Main Content: Three Effects -->
+      <div class="flex-1 px-12 pb-8">
+        <div class="text-2xl font-semibold text-blue-100 mb-6">
+          <i class="fas fa-star text-yellow-300 mr-2"></i> 쌍무계약에서 인정되는
+          공통적인 효력
+        </div>
+        <div class="grid grid-cols-3 gap-6">
+          <!-- Effect 1: 동시이행의 항변권 -->
+          <div class="effect-card p-5 flex flex-col items-center">
+            <div class="icon-container">
+              <i class="fas fa-exchange-alt text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-200 mb-3">
+              동시이행의 항변권
+            </h3>
+            <p class="text-white text-center text-xl">
+              스스로 이행ㆍ이행의 제공을 하지 <br />
+              않으면서 이행을 청구하는 상대방에 대하여 그가 이행의 제공을 할
+              때까지 자기 채무의 이행을 거절할 수 있는 항변권
+            </p>
+            <p class="text-blue-200 text-xl mt-2">쌍무계약의 이행상의 견련성</p>
+          </div>
+          <!-- Effect 2: 위험부담 -->
+          <div class="effect-card p-5 flex flex-col items-center">
+            <div class="icon-container">
+              <i class="fas fa-shield-alt text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-200 mb-3">위험부담</h3>
+            <p class="text-white text-center text-xl">
+              채무가 책임 없는 사유로 인하여 <br />
+              소멸한 경우, 그로 인하여 채무를 면한 채무자는 원칙적으로
+              상대방에게 이행을 청구할 수 없음 <br />
+              (채무자위험부담주의)
+            </p>
+            <p class="text-blue-200 text-xl mt-2 text-center">
+              예외: 채권자의 책임있는 사유, <br />
+              채권자의 수령지체
+            </p>
+          </div>
+          <!-- Effect 3: 해제·해지 -->
+          <div class="effect-card p-5 flex flex-col items-center">
+            <div class="icon-container">
+              <i class="fas fa-times-circle text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-200 mb-3">해제·해지</h3>
+            <p class="text-white text-center text-xl">
+              계약당사자가 일방적인 의사표시로 유효하게 성립되었던 계약을
+              <br />
+              원래부터 계약이 존재하지 않던 <br />
+              상태로 되돌려 놓는 것 <br />
+              (해제권)
+            </p>
+            <p class="text-blue-200 text-xl mt-2">약정해제권, 법정해제권</p>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">14 / 32</p>
+      </div>
+    </div>
+  </body>
+</html>

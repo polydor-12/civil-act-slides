@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>주택임대차</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #60a5fa;
+      }
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative text-xl">
+      <!-- Decorative elements -->
+      <div
+        class="absolute top-0 right-0 w-56 h-56 bg-blue-400 opacity-10 rounded-bl-full"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-64 h-64 bg-blue-300 opacity-10 rounded-tr-full"
+      ></div>
+      <!-- Header -->
+      <div class="w-full px-12 py-6 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">주택임대차</h1>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 px-12 py-2 flex flex-col">
+        <!-- Introduction section -->
+        <div class="mb-7">
+          <div class="flex items-center mb-4">
+            <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+              <i class="fas fa-home text-2xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">
+              주택임대차보호법의 의의
+            </h2>
+          </div>
+          <div class="content-box rounded-md p-5 ml-12">
+            <p class="text-white mb-3">• 임차인 보호를 목적으로 하는 특별법</p>
+            <p class="text-white mb-3">
+              • 주거용 건물 및 임차주택의 일부가 주거 이외의 목적으로 사용되는
+              경우에도 적용
+            </p>
+            <p class="text-white">
+              • <span class="text-yellow-200">편면적 강행규정</span>: 임차인에게
+              불리한 약정은 효력이 없음
+            </p>
+          </div>
+        </div>
+        <!-- Key features section -->
+        <div>
+          <div class="flex items-center mb-5">
+            <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+              <i class="fas fa-shield-alt text-2xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">
+              주택임대차의 기본 원칙
+            </h2>
+          </div>
+          <div class="grid grid-cols-2 gap-8 ml-12">
+            <!-- Feature 1 -->
+            <div class="content-box rounded-md p-5 flex items-start">
+              <div
+                class="feature-icon bg-blue-700 bg-opacity-40 mr-4 flex-shrink-0"
+              >
+                <i class="fas fa-file-signature text-2xl text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-medium text-blue-200 mb-2">
+                  주택임대차의 대항력
+                </h3>
+                <p class="text-white leading-[1.5]">
+                  등기가 없어도
+                  <span class="text-yellow-200">① 주택의 인도</span>와
+                  <span class="text-yellow-200">② 주민등록의 이전</span>이
+                  있으면 임대차의 대항력이 인정됨
+                </p>
+              </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="content-box rounded-md p-5 flex items-start">
+              <div
+                class="feature-icon bg-blue-700 bg-opacity-40 mr-4 flex-shrink-0"
+              >
+                <i class="fas fa-exchange-alt text-2xl text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-medium text-blue-200 mb-2">
+                  임대인 지위의 승계
+                </h3>
+                <p class="text-white leading-[1.5]">
+                  주택을 매수한 자는 임대인의 지위를 승계함 (대항력이 있는
+                  임차인 보호)
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Additional note -->
+          <div
+            class="mt-8 ml-12 bg-blue-800 bg-opacity-30 rounded-md p-4 border border-blue-400 border-opacity-30"
+          >
+            <div class="flex items-center">
+              <i class="fas fa-info-circle text-xl text-blue-300 mr-3"></i>
+              <p class="text-blue-100">
+                주택임대차보호법은 사회적 약자인 임차인의 주거안정을 보장하기
+                위한 법적 장치로, 민법의 일반원칙에 대한 특례를 규정하고
+                있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">21 / 32</p>
+      </div>
+    </div>
+  </body>
+</html>

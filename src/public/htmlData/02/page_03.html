@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>채권의 의의와 종류</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #60a5fa;
+      }
+      .type-card {
+        transition: all 0.3s ease;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        border-bottom: 3px solid #60a5fa;
+      }
+      .type-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+      .type-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative text-xl">
+      <!-- Decorative elements -->
+      <div
+        class="absolute bottom-0 left-0 w-48 h-48 bg-blue-400 opacity-10 rounded-tr-full"
+      ></div>
+      <div
+        class="absolute top-0 right-0 w-64 h-64 bg-blue-300 opacity-10 rounded-bl-full"
+      ></div>
+      <!-- Header -->
+      <div class="w-full py-6 px-12 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">
+          채권의 의의와 종류
+        </h1>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 p-10 flex flex-col">
+        <!-- Definition section -->
+        <div class="mb-8">
+          <div class="flex items-center mb-4">
+            <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+              <i class="fas fa-lightbulb text-xl text-white"></i>
+              <!-- <i class="fas fa-file-contract text-xl text-white"></i> -->
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">채권의 의의</h2>
+          </div>
+          <div class="content-box rounded-md p-5 ml-10">
+            <p class="text-white mb-3">
+              • 채권은
+              <span class="text-blue-200 font-semibold">특정인(채권자)</span>이
+              <span class="text-blue-200 font-semibold"
+                >다른 특정인(채무자)</span
+              >에 대하여
+              <span class="text-blue-200 font-semibold">특정한 행위(급부)</span
+              >를 청구할 수 있는 권리
+            </p>
+            <p class="text-white mb-3">
+              • 채권의 특성: <span class="text-blue-200">상대권, 청구권</span> -
+              채무자의 책임재산을 지키기 위한 채권자대위권, 채권자취소권도 인정
+            </p>
+            <p class="text-white">
+              • 채무는 채권자에 대하여 채권의 내용에 좇은 급부를 이행하여야 하는
+              채무자의 의무
+            </p>
+          </div>
+        </div>
+        <!-- Types section -->
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+              <i class="fas fa-file-contract text-xl text-white"></i>
+              <!-- <i class="fas fa-file-signature text-xl text-white"></i> -->
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">채권의 종류</h2>
+          </div>
+          <div class="grid grid-cols-5 gap-4 ml-10">
+            <!-- Type 1: 특정물채권 -->
+            <div class="type-card px-4 py-4 flex flex-col items-center">
+              <div class="type-icon bg-blue-700 bg-opacity-50 mb-3">
+                <i class="fas fa-box text-white"></i>
+              </div>
+              <h3 class="text-xl font-medium text-blue-200 mb-2">특정물채권</h3>
+              <p class="text-white text-center">
+                특정물의 인도를 목적으로 하는 채권
+              </p>
+            </div>
+            <!-- Type 2: 종류채권 -->
+            <div class="type-card px-4 py-4 flex flex-col items-center">
+              <div class="type-icon bg-blue-600 bg-opacity-50 mb-3">
+                <i class="fas fa-boxes text-white"></i>
+              </div>
+              <h3 class="text-xl font-medium text-blue-200 mb-2">종류채권</h3>
+              <p class="text-white text-center">
+                일정한 종류ㆍ수량의 물건을 인도할 것을 목적으로 하는 채권
+              </p>
+            </div>
+            <!-- Type 3: 금전채권 -->
+            <div class="type-card px-4 py-4 flex flex-col items-center">
+              <div class="type-icon bg-blue-500 bg-opacity-50 mb-3">
+                <i class="fas fa-coins text-white"></i>
+              </div>
+              <h3 class="text-xl font-medium text-blue-200 mb-2">금전채권</h3>
+              <p class="text-white text-center">
+                일정액의 금전의 지급을 목적으로 하는 채권
+              </p>
+            </div>
+            <!-- Type 4: 이자채권 -->
+            <div class="type-card px-4 py-4 flex flex-col items-center">
+              <div class="type-icon bg-blue-600 bg-opacity-50 mb-3">
+                <i class="fas fa-percentage text-white"></i>
+              </div>
+              <h3 class="text-xl font-medium text-blue-200 mb-2">이자채권</h3>
+              <p class="text-white text-center">
+                이자의 지급을 목적으로 하는 채권
+              </p>
+            </div>
+            <!-- Type 5: 선택채권 -->
+            <div class="type-card px-4 py-4 flex flex-col items-center">
+              <div class="type-icon bg-blue-700 bg-opacity-50 mb-3">
+                <i class="fas fa-random text-white"></i>
+              </div>
+              <h3 class="text-xl font-medium text-blue-200 mb-2">선택채권</h3>
+              <p class="text-white text-center">
+                수개의 급부 중 하나를 선택함으로써 급부의 목적이 확정되는 채권
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">3 / 32</p>
+      </div>
+    </div>
+  </body>
+</html>

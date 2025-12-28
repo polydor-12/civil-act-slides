@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>금전채권과 이자채권</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #60a5fa;
+      }
+      .feature-box {
+        transition: all 0.3s ease;
+      }
+      .feature-box:hover {
+        transform: translateY(-5px);
+      }
+      .feature-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(37, 99, 235, 0.3);
+      }
+      .bar-chart .bar {
+        fill: #60a5fa;
+        transition: all 0.3s ease;
+      }
+      .bar-chart .bar:hover {
+        fill: #93c5fd;
+      }
+      .bar-chart text {
+        fill: white;
+        font-size: 12px;
+      }
+      .bar-label {
+        font-size: 12px;
+        fill: #e0f2fe;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative">
+      <!-- Decorative elements -->
+      <div
+        class="absolute top-0 right-0 w-56 h-56 bg-blue-400 opacity-10 rounded-bl-full"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-72 h-72 bg-blue-300 opacity-10 rounded-tr-full"
+      ></div>
+      <!-- Header -->
+      <div class="w-full py-6 px-12 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">
+          금전채권과 이자채권
+        </h1>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 p-5 flex">
+        <!-- 금전채권 Section -->
+
+        <div class="flex-1 pr-6">
+          <div class="flex items-center mb-6">
+            <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+              <i class="fas fa-coins text-xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">금전채권</h2>
+          </div>
+          <div class="mt-2">
+            <h3 class="text-xl font-medium text-blue-200 mb-3 ml-2">
+              금전채권의 의의
+            </h3>
+
+            <div class="grid grid-cols-1 gap-2 text-white text-xl">
+              <div
+                class="feature-box content-box rounded-md p-3 flex items-center"
+              >
+                <div class="feature-icon mr-4 flex-shrink-0">
+                  <i class="fas fa-percentage"></i>
+                </div>
+                <p>일정액의 금전의 지급을 목적으로 하는 채권</p>
+              </div>
+              <div
+                class="feature-box content-box rounded-md p-3 flex items-center"
+              >
+                <div class="feature-icon mr-4 flex-shrink-0">
+                  <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <p>가치채권인 동시에 금액채권</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="text-xl font-medium text-blue-200 mb-3 ml-2">
+              금전채권의 특성
+            </h3>
+            <div class="grid grid-cols-1 gap-2 text-white text-xl">
+              <div
+                class="feature-box content-box rounded-md p-3 flex items-center"
+              >
+                <div class="feature-icon mr-4 flex-shrink-0">
+                  <i class="fas fa-ban"></i>
+                </div>
+                <p>이행불능 발생불가</p>
+              </div>
+              <div
+                class="feature-box content-box rounded-md p-3 flex items-center"
+              >
+                <div class="feature-icon mr-4 flex-shrink-0">
+                  <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <p>손해의 발생 및 손해액의 증명 불필요</p>
+              </div>
+              <div
+                class="feature-box content-box rounded-md p-3 flex items-center"
+              >
+                <div class="feature-icon mr-4 flex-shrink-0">
+                  <i class="fas fa-percentage"></i>
+                </div>
+                <p>손해배상액은 약정이율이 없으면 법정이율에 따라 결정</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 이자채권 Section -->
+        <div class="flex-1 pl-6 border-l border-blue-400 border-opacity-30">
+          <div class="flex items-center mb-4">
+            <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+              <i class="fas fa-chart-line text-xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">이자채권</h2>
+          </div>
+          <div class="content-box rounded-md p-5 mb-6 text-white text-xl">
+            <p class="mb-4">• 이자의 지급을 목적으로 하는 채권</p>
+            <p>• 원본채권이 존재하여야 함</p>
+          </div>
+          <div class="mt-2">
+            <h3 class="text-xl font-medium text-blue-200 mb-3 ml-2">
+              법정이율 및 이자제한
+            </h3>
+            <!-- Interest Rate Visualization -->
+            <div class="ml-10 mt-3 mb-8">
+              <svg height="140" id="interestChart" width="450"></svg>
+            </div>
+            <div class="content-box rounded-md p-4 text-white text-xl">
+              <p class="mb-4">• 법정이율 : 민사 연 5%, 상사 연 6%</p>
+              <p class="mb-4">• 소송촉진 특례법 : 연 12%</p>
+              <p>• 이자제한 : 이자제한법, 대부업법 연 20%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">5 / 32</p>
+      </div>
+    </div>
+    <script>
+      // D3.js chart for interest rates
+      document.addEventListener("DOMContentLoaded", function () {
+        const data = [
+          { type: "민사 법정이율", rate: 5 },
+          { type: "상사 법정이율", rate: 6 },
+          { type: "소송촉진 특례법", rate: 12 },
+          { type: "이자제한법", rate: 20 },
+        ];
+
+        const margin = { top: 10, right: 30, bottom: 30, left: 40 };
+        const width = 450 - margin.left - margin.right;
+        const height = 140 - margin.top - margin.bottom;
+
+        const svg = d3
+          .select("#interestChart")
+          .append("g")
+          .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // X scale
+        const x = d3
+          .scaleBand()
+          .domain(data.map((d) => d.type))
+          .range([0, width])
+          .padding(0.3);
+
+        // Y scale
+        const y = d3.scaleLinear().domain([0, 25]).range([height, 0]);
+
+        // Add bars with white color
+        svg
+          .selectAll(".bar")
+          .data(data)
+          .enter()
+          .append("rect")
+          .attr("class", "bar")
+          .attr("x", (d) => x(d.type))
+          .attr("y", (d) => y(d.rate))
+          .attr("width", x.bandwidth())
+          .attr("height", (d) => height - y(d.rate))
+          .attr("rx", 3)
+          .attr("ry", 3)
+          .attr("fill", "white") // 바 색상 설정
+          .attr("stroke", "#ccc")
+          .attr("stroke-width", 1);
+
+        // Add labels
+        svg
+          .selectAll(".bar-label")
+          .data(data)
+          .enter()
+          .append("text")
+          .attr("class", "bar-label")
+          .attr("x", (d) => x(d.type) + x.bandwidth() / 2)
+          .attr("y", (d) => y(d.rate) - 10)
+          .attr("text-anchor", "middle")
+          .style("font-size", "18px")
+          .text((d) => d.rate + "%"); // << 글자 크기 설정;
+
+        // X axis label (shortened names for better fit)
+        svg
+          .selectAll(".x-label")
+          .data(data)
+          .enter()
+          .append("text")
+          .attr("class", "bar-label")
+          .attr("x", (d) => x(d.type) + x.bandwidth() / 2)
+          .attr("y", height + 25)
+          .attr("text-anchor", "middle")
+          .style("font-size", "18px")
+          .text((d) => {
+            if (d.type === "민사 법정이율") return "민사";
+            if (d.type === "상사 법정이율") return "상사";
+            if (d.type === "소송촉진 특례법") return "소송촉진";
+            if (d.type === "이자제한법") return "이자제한";
+            return d.type;
+          });
+      });
+    </script>
+  </body>
+</html>

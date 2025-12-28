@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>전형계약 - 증여</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #60a5fa;
+      }
+      .section-card {
+        background-color: rgba(30, 58, 138, 0.5);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+      .section-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+      .section-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative text-xl">
+      <!-- Decorative elements -->
+      <div
+        class="absolute top-0 right-0 w-56 h-56 bg-blue-400 opacity-10 rounded-bl-full"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-72 h-72 bg-blue-300 opacity-10 rounded-tr-full"
+      ></div>
+      <!-- Header -->
+      <div class="w-full py-6 px-12 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">
+          전형계약 - 증여
+        </h1>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 p-8 grid grid-cols-2 gap-4">
+        <!-- Definition Section -->
+        <div class="section-card p-5">
+          <div class="flex items-center mb-3">
+            <div class="section-icon bg-blue-600 bg-opacity-70 mr-3">
+              <i class="fas fa-gift text-2xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">증여의 의의</h2>
+          </div>
+          <div class="content-box rounded-md p-4 mt-2">
+            <p class="text-white">
+              • 당사자 일방(증여자)이 재산을 상대방(수증자)에게 <br />
+              <span class="pl-3.5"></span> 무상으로 수여하는 의사를 표시하고,
+              상대방이 승낙함 <br />
+              <span class="pl-3.5"></span>으로써 성립
+            </p>
+            <p class="text-blue-200 mt-2">• 무상계약, 편무계약의 성질을 가짐</p>
+          </div>
+        </div>
+        <!-- Obligations Section -->
+        <div class="section-card p-5">
+          <div class="flex items-center mb-3">
+            <div class="section-icon bg-blue-500 bg-opacity-70 mr-3">
+              <i class="fas fa-hands-helping text-2xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">증여자의 의무</h2>
+          </div>
+          <div class="content-box rounded-md p-4 mt-2">
+            <p class="text-white mb-2">• 재산이전의무:</p>
+            <ul class="list-disc list-inside text-blue-200 ml-4">
+              <li>동산: 인도</li>
+              <li>부동산: 등기 및 인도</li>
+              <li>채권: 대항요건 구비</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Warranty Section -->
+        <div class="section-card p-5">
+          <div class="flex items-center mb-3">
+            <div class="section-icon bg-blue-700 bg-opacity-70 mr-3">
+              <i class="fas fa-shield-alt text-2xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">
+              증여자의 담보책임
+            </h2>
+          </div>
+          <div class="content-box rounded-md p-4 mt-2">
+            <p class="text-white mb-2">
+              • 원칙: 무상계약이므로 담보책임 부담하지 않음
+            </p>
+            <p class="text-white mb-1">• 예외:</p>
+            <ul class="text-blue-200 ml-4">
+              <li>- 하자나 흠결을 알고 고지하지 않은 경우</li>
+              <li>
+                - 상대부담 있는 증여의 경우 그 부담 한도 내 담보책임 <br />
+                <span class="pl-3.5"></span> 부담
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Revocation Section -->
+        <div class="section-card p-5">
+          <div class="flex items-center mb-3">
+            <div class="section-icon bg-blue-800 bg-opacity-70 mr-3">
+              <i class="fas fa-undo-alt text-2xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">증여의 해제</h2>
+          </div>
+          <div class="content-box rounded-md p-4 mt-2">
+            <p class="text-white mb-1">• 해제권 발생 원인:</p>
+            <ul class="text-blue-200 ml-4 mb-2">
+              <li>1. 서면에 의하지 않은 증여</li>
+              <li>2. 수증자의 망은행위</li>
+              <li>3. 증여자의 재산상태 악화</li>
+            </ul>
+            <p class="text-white">• 이미 이행된 부분은 해제 효과 미치지 않음</p>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">17 / 32</p>
+      </div>
+    </div>
+  </body>
+</html>

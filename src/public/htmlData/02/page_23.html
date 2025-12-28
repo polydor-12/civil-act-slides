@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>상가건물임대차</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #60a5fa;
+      }
+      .protection-card {
+        transition: all 0.3s ease;
+        background-color: rgba(30, 58, 138, 0.6);
+        border-left: 4px solid #3b82f6;
+      }
+      .protection-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      .circle-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative text-xl">
+      <!-- Decorative elements -->
+      <div
+        class="absolute top-0 right-0 w-56 h-56 bg-blue-300 opacity-10 rounded-bl-full"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-72 h-72 bg-blue-400 opacity-10 rounded-tr-full"
+      ></div>
+      <!-- Header -->
+      <div class="w-full py-6 px-12 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">
+          상가건물임대차
+        </h1>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 px-10 py-8 flex flex-col">
+        <!-- Significance section -->
+        <div class="mb-8">
+          <div class="flex items-center mb-4">
+            <div class="circle-icon bg-blue-600 bg-opacity-50 mr-4">
+              <i class="fas fa-store text-2xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">
+              상가건물 임대차보호법의 의의
+            </h2>
+          </div>
+          <div class="content-box rounded-md p-5 ml-12">
+            <p class="text-white mb-3">
+              <i class="fas fa-check-circle text-blue-300 mr-2"></i>
+              사회적ㆍ경제적 약자인 상가건물 임차인을 보호하기 위하여 제정ㆍ시행
+            </p>
+            <p class="text-white">
+              <i class="fas fa-check-circle text-blue-300 mr-2"></i>
+              일정액의 보증금액 이하의 임대차에 적용되는 것이 원칙이나, 주요
+              임차인 보호 규정은 모든 상가건물 임대차에 적용
+            </p>
+          </div>
+        </div>
+        <!-- Protection Methods Overview -->
+        <div>
+          <div class="flex items-center mb-5">
+            <div class="circle-icon bg-blue-600 bg-opacity-50 mr-4">
+              <i class="fas fa-shield-alt text-2xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">
+              상가임차인 보호 방법 개요
+            </h2>
+          </div>
+          <div class="grid grid-cols-3 gap-6 ml-12">
+            <!-- Protection 1 -->
+            <div class="protection-card rounded-md p-5 flex flex-col">
+              <div class="flex items-center mb-3">
+                <div class="bg-blue-500 bg-opacity-30 rounded-full p-2 mr-3">
+                  <i class="fas fa-building text-xl text-blue-200"></i>
+                </div>
+                <h3 class="text-2xl font-medium text-blue-200">대항력 인정</h3>
+              </div>
+              <ul class="text-white space-y-4 pl-5 mt-2">
+                <li>
+                  <i class="fas fa-angle-right text-blue-300 mr-2"></i>건물의
+                  인도
+                </li>
+                <li>
+                  <i class="fas fa-angle-right text-blue-300 mr-2"></i>사업자
+                  등록
+                </li>
+                <li>
+                  <i class="fas fa-angle-right text-blue-300 mr-2"></i>등기
+                  없이도 대항력 인정
+                </li>
+              </ul>
+            </div>
+            <!-- Protection 2 -->
+            <div class="protection-card rounded-md p-5 flex flex-col">
+              <div class="flex items-center mb-3">
+                <div class="bg-blue-500 bg-opacity-30 rounded-full p-2 mr-3">
+                  <i class="fas fa-calendar-check text-xl text-blue-200"></i>
+                </div>
+                <h3 class="text-2xl font-medium text-blue-200">존속 보장</h3>
+              </div>
+              <ul class="text-white space-y-4 pl-5 mt-2">
+                <li>
+                  <i class="fas fa-angle-right text-blue-300 mr-2"></i>최단기간
+                  1년
+                </li>
+                <li>
+                  <i class="fas fa-angle-right text-blue-300 mr-2"></i>전체기간
+                  10년까지
+                </li>
+                <li>
+                  <i class="fas fa-angle-right text-blue-300 mr-2"></i
+                  >계약갱신요구권 인정
+                </li>
+              </ul>
+            </div>
+            <!-- Protection 3 -->
+            <div class="protection-card rounded-md p-5 flex flex-col">
+              <div class="flex items-center mb-3">
+                <div class="bg-blue-500 bg-opacity-30 rounded-full p-2 mr-3">
+                  <i class="fas fa-money-bill-wave text-xl text-blue-200"></i>
+                </div>
+                <h3 class="text-2xl font-medium text-blue-200">보증금 보호</h3>
+              </div>
+              <ul class="text-white space-y-4 pl-5 mt-2">
+                <li>
+                  <i class="fas fa-angle-right text-blue-300 mr-2"></i
+                  >주택임대차와 동일 방식
+                </li>
+                <li>
+                  <i class="fas fa-angle-right text-blue-300 mr-2"></i>보증금
+                  우선변제권
+                </li>
+                <li>
+                  <i class="fas fa-angle-right text-blue-300 mr-2"></i
+                  >소액임차인 최우선변제권
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-6 ml-12">
+            <p class="text-blue-200 italic">
+              ※ 다음 슬라이드에서 상가임차인 보호 방법에 대해 자세히 다룹니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">23 / 32</p>
+      </div>
+    </div>
+  </body>
+</html>

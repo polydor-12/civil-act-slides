@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>특정물채권과 종류채권</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+      .content-box:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      .vs-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgba(96, 165, 250, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 18px;
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+      }
+      .feature-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative">
+      <!-- Decorative elements -->
+      <div
+        class="absolute top-0 right-0 w-48 h-48 bg-blue-400 opacity-10 rounded-bl-full"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-64 h-64 bg-blue-300 opacity-10 rounded-tr-full"
+      ></div>
+      <!-- Header -->
+      <div class="w-full py-6 px-12 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">
+          특정물채권과 종류채권
+        </h1>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 px-10 py-4 flex flex-col">
+        <!-- Comparison section -->
+
+        <div class="grid grid-cols-9">
+          <!-- Left side: 특정물채권 -->
+          <div class="col-span-4 content-box p-6 border-l-4 border-blue-400">
+            <div class="flex items-center mb-10">
+              <div class="feature-icon bg-blue-600 bg-opacity-50">
+                <i class="fas fa-cubes text-2xl text-white"></i>
+              </div>
+              <h2 class="text-2xl font-semibold text-blue-100">특정물채권</h2>
+            </div>
+            <div class="pl-4 mt-6">
+              <div class="flex items-start mb-10 text-xl">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                <p class="text-white">특정물의 인도를 목적으로 하는 채권</p>
+              </div>
+              <div class="flex items-start mb-10 text-xl">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                <p class="text-white">
+                  채무자는 물건의 인도 시까지
+                  <span class="text-blue-200 font-semibold">선관주의의무</span
+                  >를 부담
+                </p>
+              </div>
+              <div class="flex items-start text-xl">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                <p class="text-white">
+                  거래상 일반적 평균인에게 요구되는 정도의 주의를 다하여야 함
+                </p>
+              </div>
+            </div>
+            <div class="mt-8 bg-blue-800 bg-opacity-30 p-4 rounded-md">
+              <div class="flex items-center">
+                <i class="fas fa-lightbulb text-yellow-300 mr-3"></i>
+                <p class="text-blue-100 text-xl font-medium">
+                  예 : 특정 미술품, 특정 중고차, 특정 부동산
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Center VS circle -->
+          <div class="col-span-1 flex items-center justify-center">
+            <div class="vs-circle">VS</div>
+          </div>
+          <!-- Right side: 종류채권 -->
+          <div class="col-span-4 content-box p-6 border-l-4 border-blue-300">
+            <div class="flex items-center mb-10">
+              <div class="feature-icon bg-blue-500 bg-opacity-50">
+                <i class="fas fa-boxes text-2xl text-white"></i>
+              </div>
+              <h2 class="text-2xl font-semibold text-blue-100">종류채권</h2>
+            </div>
+            <div class="pl-4 mt-6">
+              <div class="flex items-start mb-10 text-xl">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                <p class="text-white">
+                  일정한 종류ㆍ수량의 물건을 인도할 것을 목적으로 하는 채권
+                </p>
+              </div>
+              <div class="flex items-start mb-10 text-xl">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                <p class="text-white">
+                  인도할 목적물이
+                  <span class="text-blue-200 font-semibold">종류와 수량</span
+                  >으로 정해짐
+                </p>
+              </div>
+              <div class="flex items-start text-xl">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                <p class="text-white">
+                  특정한 물건이 아닌 동종ㆍ동질의 물건으로 이행 가능
+                </p>
+              </div>
+            </div>
+            <div class="mt-8 bg-blue-800 bg-opacity-30 p-4 rounded-md">
+              <div class="flex items-center">
+                <i class="fas fa-lightbulb text-yellow-300 mr-3"></i>
+                <p class="text-blue-100 text-xl font-medium">
+                  예 : 쌀 10kg, 휘발유 1000리터, 운동복 10벌
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Key difference -->
+        <div class="mt-6 content-box p-4 bg-blue-700 bg-opacity-30">
+          <div class="flex items-center text-xl">
+            <i class="fas fa-balance-scale text-blue-200 mr-3"></i>
+            <p class="text-white font-medium">핵심 차이점 :</p>
+            <div class="text-white font-medium ml-3">
+              <p class="mb-1">
+                특정물채권은 특정된 물건만으로 채무이행이 가능한 반면,
+                종류채권은 동종ㆍ동질의 다른 물건으로도
+              </p>
+              <p>채무이행이 가능합니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">4 / 32</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>건물의 구분소유권</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .content-block {
+        background-color: rgba(26, 54, 93, 0.4);
+        border: 1px solid rgba(66, 153, 225, 0.3);
+        transition: all 0.3s ease;
+      }
+      .content-block:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        border-color: rgba(66, 153, 225, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <h1 class="text-4xl font-bold">건물의 구분소유권</h1>
+        <div class="mt-2 text-blue-300">
+          건물 구분소유권의 의의와 성립요건에 대한 설명
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-36 bottom-5 left-0 right-0 px-12">
+        <div class="flex h-full">
+          <!-- Left section: Definition -->
+          <div class="w-1/2 pr-6">
+            <div class="content-block rounded-lg p-6 h-full flex flex-col">
+              <div class="flex items-center mb-4">
+                <div class="text-3xl text-blue-300 mr-3">
+                  <i class="fas fa-building"></i>
+                </div>
+                <h2 class="text-2xl font-bold">구분소유권의 의의</h2>
+              </div>
+              <div class="flex-grow">
+                <p class="mb-4 text-lg">
+                  건물은 원칙적으로 1동이 하나의 물건이지만, 다음과 같은 경우
+                  구분소유권이 인정됩니다:
+                </p>
+                <ul class="space-y-3 text-lg">
+                  <li class="flex">
+                    <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                    <span
+                      >1동의 건물이
+                      <span class="text-blue-200 font-semibold"
+                        >구조상·이용상 독립성</span
+                      >을 가지는 여러 부분으로 나누어진 경우</span
+                    >
+                  </li>
+                  <li class="flex">
+                    <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                    <span
+                      >각 부분이
+                      <span class="text-blue-200 font-semibold"
+                        >사회관념상 경제적으로 독립한 건물</span
+                      >과 동일하게 취급되는 경우</span
+                    >
+                  </li>
+                  <li class="flex">
+                    <i class="fas fa-check-circle text-blue-300 mt-1 mr-3"></i>
+                    <span>집합건물법에서 자세히 규정하고 있음</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- Building Diagram -->
+              <div class="mt-4 h-56 relative" id="building-diagram">
+                <!-- Building outline -->
+                <div
+                  class="absolute inset-x-16 top-0 bottom-0 border-2 border-blue-300 rounded-t-lg"
+                ></div>
+                <!-- Floor divisions -->
+                <div class="absolute inset-x-16 top-1/3 h-px bg-blue-300"></div>
+                <div class="absolute inset-x-16 top-2/3 h-px bg-blue-300"></div>
+                <!-- Unit divisions on each floor -->
+                <div
+                  class="absolute left-16 right-1/2 top-0 bottom-2/3 border-r-2 border-blue-300"
+                ></div>
+                <div
+                  class="absolute left-16 right-1/2 top-1/3 bottom-1/3 border-r-2 border-blue-300"
+                ></div>
+                <div
+                  class="absolute left-16 right-1/2 top-2/3 bottom-0 border-r-2 border-blue-300"
+                ></div>
+                <!-- Labels -->
+                <div class="absolute left-28 top-6 text-center text-blue-200">
+                  A호
+                </div>
+                <div class="absolute right-28 top-6 text-center text-blue-200">
+                  B호
+                </div>
+                <div
+                  class="absolute left-28 top-1/3 mt-6 text-center text-blue-200"
+                >
+                  C호
+                </div>
+                <div
+                  class="absolute right-28 top-1/3 mt-6 text-center text-blue-200"
+                >
+                  D호
+                </div>
+                <div
+                  class="absolute left-28 top-2/3 mt-6 text-center text-blue-200"
+                >
+                  E호
+                </div>
+                <div
+                  class="absolute right-28 top-2/3 mt-6 text-center text-blue-200"
+                >
+                  F호
+                </div>
+                <!-- Floor labels -->
+                <div class="absolute left-4 top-1/6 text-blue-300">3층</div>
+                <div class="absolute left-4 top-1/2 text-blue-300">2층</div>
+                <div class="absolute left-4 top-5/6 text-blue-300">1층</div>
+              </div>
+            </div>
+          </div>
+          <!-- Right section: Requirements -->
+          <div class="w-1/2 pl-6">
+            <div class="content-block rounded-lg p-6 mb-4">
+              <div class="flex items-center mb-5">
+                <div class="text-3xl text-blue-300 mr-3">
+                  <i class="fas fa-clipboard-list"></i>
+                </div>
+                <h2 class="text-2xl font-bold">구분소유권의 성립요건</h2>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <h3 class="text-xl font-semibold mb-2 flex items-center">
+                    <i class="fas fa-puzzle-piece text-blue-300 mr-2"></i>
+                    <span>건물 일부의 이용상 · 구조상 독립성</span>
+                  </h3>
+                  <ul class="ml-8 space-y-2 text-lg">
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-angle-right text-blue-300 mt-1.5 mr-2"
+                      ></i>
+                      <span>다른 부분과 구조상 구분된 내부 구조</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-angle-right text-blue-300 mt-1.5 mr-2"
+                      ></i>
+                      <span>다른 부분과 별도로 거주 또는 이용 가능해야 함</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2 flex items-center">
+                    <i class="fas fa-gavel text-blue-300 mr-2"></i>
+                    <span>처분권자의 구분행위</span>
+                  </h3>
+                  <ul class="ml-8 space-y-2 text-lg">
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-angle-right text-blue-300 mt-1.5 mr-2"
+                      ></i>
+                      <span>건물 소유자의 구분의사 필요</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-angle-right text-blue-300 mt-1.5 mr-2"
+                      ></i>
+                      <span>구분소유권 설정을 위한 법률행위</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Additional info box -->
+            <div class="content-block rounded-lg p-6">
+              <div class="flex items-center mb-4">
+                <div class="text-3xl text-blue-300 mr-3">
+                  <i class="fas fa-info-circle"></i>
+                </div>
+                <h2 class="text-xl font-bold">구분소유권의 중요성</h2>
+              </div>
+              <p class="text-lg">
+                구분소유권은 아파트, 오피스텔, 상가 등 현대 건축물에서 매우
+                중요한 소유형태로, 각 구분소유자에게 전유부분에 대한 독립적인
+                소유권을 부여합니다. 이는 다음 슬라이드에서 다룰 구분소유자의
+                권리와 의무와 밀접하게 연관됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">27 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

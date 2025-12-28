@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>토지소유권 (계속)</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .concept-card {
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+      .concept-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .icon-box {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <div class="flex justify-between items-center">
+          <div>
+            <h1 class="text-4xl font-bold">토지소유권 (계속)</h1>
+            <div class="mt-2 text-blue-300">
+              상린관계와 관련된 권리와 의무에 대한 설명
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-36 bottom-20 left-0 right-0 px-16">
+        <!-- Introduction to 상린관계 -->
+        <div class="mb-5">
+          <div class="flex items-center">
+            <div class="icon-box bg-blue-700 mr-6">
+              <i class="fas fa-home text-3xl text-blue-300"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold mb-2">상린관계 (相隣關係)</h2>
+              <p class="text-lg">
+                토지소유자 상호간에 토지의 이용을 조절하기 위하여 제216조부터
+                제244조까지 그들 사이의 토지이용과 관련된 <br />
+                권리와 의무를 규정
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Three key rights in grid layout -->
+        <div class="grid grid-cols-3 gap-8 h-67">
+          <!-- 인지사용청구권 -->
+          <div
+            class="concept-card bg-blue-800 bg-opacity-50 rounded-lg px-6 py-3 flex flex-col border border-blue-700"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-tools text-blue-300"></i>
+              </div>
+              <h3 class="text-xl font-bold">인지사용청구권</h3>
+            </div>
+            <p class="text-lg mb-4">
+              담ㆍ건물의 축조ㆍ수선을 위해 인접 토지의 사용이 가능함
+            </p>
+            <div class="mt-auto">
+              <div class="flex items-center text-blue-300">
+                <i class="fas fa-info-circle mr-2"></i>
+                <span class="text-sm">민법 제216조부터 제244조</span>
+              </div>
+            </div>
+          </div>
+          <!-- 주위토지통행권 -->
+          <div
+            class="concept-card bg-blue-800 bg-opacity-50 rounded-lg px-6 py-3 flex flex-col border border-blue-700"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-road text-blue-300"></i>
+              </div>
+              <h3 class="text-xl font-bold">주위토지통행권</h3>
+            </div>
+            <p class="text-lg mb-4">
+              공로로의 통로가 없는 경우 주위 토지를 통행하거나 통로를 개설할 수
+              있는 권리
+            </p>
+            <div class="mt-auto">
+              <div class="flex items-center text-blue-300">
+                <i class="fas fa-hand-holding-usd mr-2"></i>
+                <span class="text-sm">보상 필요</span>
+              </div>
+            </div>
+          </div>
+          <!-- 생활방해의 금지 -->
+          <div
+            class="concept-card bg-blue-800 bg-opacity-50 rounded-lg px-6 py-3 flex flex-col border border-blue-700"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-ban text-blue-300"></i>
+              </div>
+              <h3 class="text-xl font-bold">생활방해의 금지</h3>
+            </div>
+            <p class="text-lg mb-2">
+              매연ㆍ열기체ㆍ액체ㆍ음향ㆍ진동 기타 이와 유사한 것에 의하여 이웃
+              토지의 사용을 방해하거나 거주자의 생활에 고통을 주지 않도록 적당한
+              조처를 할 의무
+            </p>
+            <div class="mt-auto">
+              <div class="flex items-center text-blue-300">
+                <i class="fas fa-exclamation-circle mr-2"></i>
+                <span class="text-sm"
+                  >통상 용도에 적당한 것인 경우에는 인용의무가 인정</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Additional information -->
+        <div
+          class="mt-8 bg-blue-800 bg-opacity-30 rounded-lg p-6 border border-blue-700"
+        >
+          <div class="flex items-start">
+            <div class="text-3xl text-blue-300 mr-4">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">상린관계의 의의</h3>
+              <p class="text-lg">
+                상린관계는 인접한 토지 소유자 사이에 발생하는 이해관계를
+                조정하기 위한 법적 규정으로, 토지의 효율적이고 평화로운 이용을
+                위한 권리와 의무 관계를 정립합니다. 각 토지 소유자는 자신의
+                권리를 행사하면서도 이웃 토지 소유자의 이익을 고려해야 합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">25 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

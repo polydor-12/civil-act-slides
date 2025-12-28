@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>일반불법행위의 의의</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #60a5fa;
+      }
+      .concept-card {
+        transition: all 0.3s ease;
+        background-color: rgba(37, 99, 235, 0.2);
+        border: 1px solid rgba(147, 197, 253, 0.3);
+      }
+      .concept-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      }
+      .icon-container {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative text-xl">
+      <!-- Decorative elements -->
+      <div
+        class="absolute top-0 right-0 w-64 h-64 bg-blue-400 opacity-10 rounded-bl-full"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-48 h-48 bg-blue-300 opacity-10 rounded-tr-full"
+      ></div>
+      <!-- Header -->
+      <div class="w-full py-6 px-12 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">
+          일반불법행위의 의의
+        </h1>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 px-7 p-3 flex flex-col">
+        <!-- Concept section -->
+        <div class="mb-4">
+          <div class="flex items-center mb-3">
+            <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+              <i class="fas fa-exclamation-triangle text-xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">
+              불법행위의 개념
+            </h2>
+          </div>
+          <div class="content-box rounded-md px-4 py-2 ml-10 leading-[1.7]">
+            <p class="text-white">
+              • 고의 또는 과실로 타인에게 손해를 발생시키는 위법행위
+            </p>
+            <p class="text-white">
+              • 가해자는 피해자에게 손해배상을 하도록 규정함
+            </p>
+          </div>
+        </div>
+        <!-- Types section -->
+        <div class="mb-4">
+          <div class="flex items-center mb-3">
+            <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+              <i class="fas fa-sitemap text-xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">
+              불법행위의 종류
+            </h2>
+          </div>
+          <div class="content-box rounded-md px-4 py-3 ml-10 leading-[1.7]">
+            <div class="flex items-start">
+              <div class="w-1/3 pr-4">
+                <p class="text-white mb-2 text-xl">• 일반불법행위</p>
+                <p class="text-blue-200 text-md ml-2">
+                  제750조 고의 또는 과실로 인한 위법행위로 타인에게 손해를 가한
+                  자는 그 손해를 배상할 책임이 있다.
+                </p>
+              </div>
+              <div
+                class="w-1/3 pr-4 border-l border-blue-400 border-opacity-50 pl-4 leading-[1.7]"
+              >
+                <p class="text-white text-xl mb-2">• 특수불법행위</p>
+                <p class="text-blue-200 text-md ml-4">
+                  - 무능력자의 감독자책임
+                </p>
+                <p class="text-blue-200 text-md ml-4">- 사용자책임</p>
+                <p class="text-blue-200 text-md ml-4">- 공동불법행위</p>
+              </div>
+              <div
+                class="w-1/3 pl-4 border-l border-blue-400 border-opacity-50 leading-[1.7]"
+              >
+                <p class="text-white text-xl mb-2">• 특별법상 불법행위책임</p>
+                <p class="text-blue-200 text-md ml-4">- 자동차운행자책임</p>
+                <p class="text-blue-200 text-md ml-4">- 제조물책임</p>
+                <p class="text-blue-200 text-md ml-4">- 국가배상책임</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Legal obligations section -->
+        <div>
+          <div class="flex items-center mb-3">
+            <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+              <i class="fas fa-balance-scale text-xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">
+              법정채권발생원인
+            </h2>
+          </div>
+          <div class="grid grid-cols-3 gap-4 ml-10">
+            <!-- 불법행위 -->
+            <div class="concept-card rounded-lg p-4 flex flex-col items-center">
+              <div class="flex">
+                <i
+                  class="fas fa-gavel text-xl text-xl text-red-200 mt-1 mr-2"
+                ></i>
+
+                <h3 class="text-xl font-medium text-blue-200 mb-2">불법행위</h3>
+              </div>
+              <p class="text-white text-center">
+                고의 또는 과실로 타인에게 손해를 <br />발생시키는 위법행위
+              </p>
+            </div>
+            <!-- 사무관리 -->
+            <div class="concept-card rounded-lg p-4 flex flex-col items-center">
+              <div class="flex items-center justify-content">
+                <!-- <div
+                  class="icon-container bg-green-500 bg-opacity-30 mb-2 mr-2"
+                > -->
+                <i
+                  class="fas fa-hands-helping text-xl text-yellow-200 mb-2 mr-2"
+                ></i>
+                <!-- </div> -->
+                <h3 class="text-xl font-medium text-blue-200 mb-2">사무관리</h3>
+              </div>
+
+              <p class="text-white text-center">
+                계약상 또는 법률상 의무 없이 타인을 <br />
+                위하여 그의 사무를 처리하는 것
+              </p>
+            </div>
+            <!-- 부당이득 -->
+            <div
+              class="concept-card rounded-lg px-3 py-4 flex flex-col items-center"
+            >
+              <div class="flex">
+                <i
+                  class="fas fa-exchange-alt text-xl text-green-200 mt-1 mr-2"
+                ></i>
+
+                <h3 class="text-xl font-medium text-blue-200 mb-2">부당이득</h3>
+              </div>
+              <p class="text-white text-center">
+                법률상 원인 없이 타인의 재산, 노무로 인하여 얻은 이익을 반환해야
+                하는 의무
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">25 / 32</p>
+      </div>
+    </div>
+  </body>
+</html>

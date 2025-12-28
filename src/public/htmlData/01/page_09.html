@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>민법의 기본개념 (계속)</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .concept-box {
+        transition: all 0.3s ease;
+        position: relative;
+      }
+      .concept-box:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <h1 class="text-4xl font-bold">민법의 기본개념 (계속)</h1>
+        <div class="mt-2 text-blue-300">법률관계의 정의와 특성에 대한 설명</div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-36 bottom-16 left-0 right-0 px-16">
+        <!-- Definition section -->
+        <div class="mb-5">
+          <div class="flex items-center mb-4">
+            <div class="text-blue-300 text-3xl mr-4">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <h2 class="text-2xl font-semibold">법률관계의 의의</h2>
+          </div>
+          <div class="pl-12 text-lg">
+            <p>법에 의하여 규율되는 생활관계로서, 권리와 의무로 구성됩니다.</p>
+            <p class="mt-2 text-blue-200 italic">
+              모든 생활관계가 법률관계는 아니며, 모든 사적 다툼이 법률(민법)에
+              의하여 해결될 수 있는 것은 아닙니다.
+            </p>
+          </div>
+        </div>
+        <!-- Two columns section -->
+        <div class="grid grid-cols-2 gap-10">
+          <!-- Left column - Legal relationships -->
+          <div
+            class="concept-box bg-blue-800 bg-opacity-50 rounded-lg p-5 border border-blue-700"
+          >
+            <div class="text-center mb-5">
+              <div class="inline-block text-4xl text-blue-300 mb-2">
+                <i class="fas fa-gavel"></i>
+              </div>
+              <h3 class="text-xl font-bold">법률관계</h3>
+            </div>
+            <ul class="space-y-4 text-lg">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i>
+                <span>권리와 의무로 구성된 관계</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i>
+                <span>법에 의하여 규율됨</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i>
+                <span>국가의 강제력(법의 적용)에 의하여 해결 가능</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i>
+                <span>예: 매매계약, 임대차계약, 고용계약</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Right column - Non-legal relationships -->
+          <div
+            class="concept-box bg-blue-800 bg-opacity-50 rounded-lg p-5 border border-blue-700"
+          >
+            <div class="text-center mb-6">
+              <div class="inline-block text-4xl text-blue-300 mb-2">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <h3 class="text-xl font-bold">호의관계</h3>
+            </div>
+            <ul class="space-y-4 text-lg">
+              <li class="flex items-start">
+                <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                <span>법적 구속력이 없는 관계</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                <span>도덕, 윤리, 관습 등에 의해 규율됨</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                <span>법적 강제력으로 해결되지 않음</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                <span>예: 친구에게 책을 빌려주기, 무상으로 차량 태워주기</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Bottom note -->
+        <div
+          class="mt-5 bg-blue-700 bg-opacity-30 p-5 rounded-lg border-l-4 border-blue-300"
+        >
+          <div class="flex items-start">
+            <i class="fas fa-lightbulb text-yellow-300 text-2xl mt-1 mr-4"></i>
+            <div>
+              <p class="text-lg font-medium">중요 포인트</p>
+              <p>
+                법률관계인 경우에 한해 국가의 강제력(법의 적용)에 의하여
+                해결됩니다. 모든 생활관계가 법률관계는 아니며, 법률관계와
+                호의관계를 구별하는 것이 중요합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">9 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

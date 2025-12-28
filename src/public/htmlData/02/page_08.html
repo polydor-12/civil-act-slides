@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>채무불이행의 유형 - 이행지체</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #60a5fa;
+      }
+      .effect-box {
+        transition: all 0.3s ease;
+        background-color: rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+      }
+      .effect-box:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+      .icon-circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative">
+      <!-- Decorative elements -->
+      <div
+        class="absolute top-0 right-0 w-48 h-48 bg-blue-400 opacity-10 rounded-bl-full"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-64 h-64 bg-blue-300 opacity-10 rounded-tr-full"
+      ></div>
+      <!-- Header -->
+      <div class="w-full py-5 px-12 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">
+          채무불이행의 유형 - 이행지체
+        </h1>
+        <p class="text-xl text-blue-200 mt-2">
+          채무자가 이행기에 이행이 가능함에도 귀책사유로 이행하지 않는 상태
+        </p>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 px-10 py-4 flex flex-col">
+        <!-- Requirements section -->
+        <div class="mb-5">
+          <div class="flex items-center mb-2">
+            <div class="icon-circle bg-blue-600 mr-3">
+              <i class="fas fa-clipboard-list text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">
+              이행지체의 요건
+            </h2>
+          </div>
+          <div class="content-box rounded-md p-4 ml-12 text-xl">
+            <ul
+              class="text-white grid grid-cols-2 gap-x-6 gap-y-2 list-disc ml-6"
+            >
+              <li>유효한 채권관계의 존재</li>
+              <li>이행기의 도래</li>
+              <li>이행기에 채무이행이 가능할 것</li>
+              <li>채무자의 귀책사유</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Effects section -->
+        <div class="mb-5">
+          <div class="flex items-center mb-3">
+            <div class="icon-circle bg-blue-600 mr-3">
+              <i class="fas fa-exclamation-circle text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">
+              이행지체의 효과
+            </h2>
+          </div>
+          <div class="grid grid-cols-3 gap-4 ml-12 text-xl">
+            <!-- Effect 1: 이행의 강제 -->
+            <div class="effect-box p-4">
+              <div class="flex items-center mb-3">
+                <div
+                  class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-2"
+                >
+                  <i class="fas fa-gavel text-white"></i>
+                </div>
+                <h3 class="text-xl font-medium text-blue-200">이행의 강제</h3>
+              </div>
+              <ul class="text-white list-disc ml-5 space-y-1">
+                <li class="text-white">채무이행의 청구 가능</li>
+                <li class="text-white">강제이행을 통하여 급부를 실현가능</li>
+              </ul>
+            </div>
+            <!-- Effect 2: 손해배상청구권 -->
+            <div class="effect-box p-4">
+              <div class="flex items-center mb-3">
+                <div
+                  class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-2"
+                >
+                  <i class="fas fa-hand-holding-usd text-sm text-white"></i>
+                </div>
+                <h3 class="text-xl font-medium text-blue-200">
+                  손해배상청구권
+                </h3>
+              </div>
+              <ul class="text-white list-disc ml-5 space-y-1">
+                <li>지연배상청구권: 이행 전제</li>
+                <li>전보배상청구권: 최고 후 미이행</li>
+                <li>책임의 가중: 귀책사유 없어도 배상</li>
+              </ul>
+            </div>
+            <!-- Effect 3: 계약해제권 -->
+            <div class="effect-box p-4">
+              <div class="flex items-center mb-3">
+                <div
+                  class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-2"
+                >
+                  <i class="fas fa-file-contract text-white"></i>
+                </div>
+                <h3 class="text-xl font-medium text-blue-200">계약해제권</h3>
+              </div>
+              <ul class="text-white list-disc ml-5 space-y-1">
+                <li>상당한 기간을 정하여 이행 최고</li>
+                <li>기간 내 이행 X -> 계약해제 가능</li>
+                <li>손해배상도 병존적으로 가능</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Termination section -->
+        <div>
+          <div class="flex items-center mb-2">
+            <div class="icon-circle bg-blue-600 mr-3">
+              <i class="fas fa-stop-circle text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">
+              이행지체의 종료
+            </h2>
+          </div>
+          <div class="content-box rounded-md p-3 ml-12 text-xl">
+            <div class="grid grid-cols-2 gap-3">
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-blue-300 mr-2"></i>
+                <p class="text-white">채권의 소멸</p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-blue-300 mr-2"></i>
+                <p class="text-white">채권자의 지체면제</p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-blue-300 mr-2"></i>
+                <p class="text-white">
+                  지연배상과 함께 채무의 내용에 좇은 이행의 제공
+                </p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-blue-300 mr-2"></i>
+                <p class="text-white">지체 중 이행불능의 발생</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">8 / 32</p>
+      </div>
+    </div>
+  </body>
+</html>

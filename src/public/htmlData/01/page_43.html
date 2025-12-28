@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>질권</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .feature-card {
+        transition: all 0.3s ease;
+      }
+      .feature-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <div class="flex justify-between items-center">
+          <div>
+            <h1 class="text-4xl font-bold">질권</h1>
+            <div class="mt-2 text-blue-300">
+              질권의 의의와 동산질권에 대한 설명
+            </div>
+          </div>
+          <div class="text-right text-4xl text-blue-300">
+            <i class="fas fa-lock"></i>
+          </div>
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-36 bottom-16 left-0 right-0 px-16">
+        <!-- Definition Section -->
+        <div class="mb-7">
+          <h2 class="text-2xl font-bold mb-4 flex items-center">
+            <i class="fas fa-info-circle text-blue-300 mr-3"></i>질권의 의의
+          </h2>
+          <div class="ml-8 text-lg leading-relaxed">
+            <p>
+              채권자가 채권의 담보를 목적으로 채무자 또는
+              제3자(물상보증인)으로부터 인도받은 동산이나 재산권을 채무의 변제가
+              있을 때까지 유치함으로써 채무의 변제를 간접적으로 강제하고 채무의
+              변제가 이루어지지 않는 경우에는 그 동산이나 재산권으로부터
+              우선변제를 받을 수 있는 담보물권
+            </p>
+          </div>
+        </div>
+        <!-- Movable Property Pledge Section -->
+        <div class="grid grid-cols-2 gap-8">
+          <!-- Left Column: Requirements -->
+          <div
+            class="feature-card bg-blue-800 bg-opacity-50 rounded-lg px-6 py-4 border border-blue-700"
+          >
+            <h3 class="text-xl font-bold mb-4 flex items-center">
+              <i class="fas fa-clipboard-list text-blue-300 mr-2"></i>동산질권의
+              성립요건
+            </h3>
+            <ul class="space-y-3 ml-2 text-lg">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+                <span
+                  ><strong>피담보채권</strong> - 질권으로 담보되는 채권</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+                <span
+                  ><strong>질권설정계약</strong> - 질권설정자와 질권자 간의
+                  합의</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+                <span><strong>동산의 인도</strong> - 점유개정은 불가</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Right Column: Effects -->
+          <div
+            class="feature-card bg-blue-800 bg-opacity-50 rounded-lg px-6 py-4 border border-blue-700"
+          >
+            <h3 class="text-xl font-bold mb-4 flex items-center">
+              <i class="fas fa-bolt text-blue-300 mr-2"></i>동산질권의 효력
+            </h3>
+            <ul class="space-y-3 ml-2 text-lg">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+                <span
+                  ><strong>유치적 효력</strong> - 변제 시까지 목적물을 점유할 수
+                  있는 권리</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+                <span
+                  ><strong>경매청구권</strong> - 목적물을 경매할 수 있는
+                  권리</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+                <span
+                  ><strong>우선변제권</strong> - 목적물의 경매대가에서 다른
+                  채권자에 우선하여 변제받을 권리</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Additional Information: Jeongjilgwon -->
+        <div
+          class="mt-8 bg-blue-800 bg-opacity-30 rounded-lg px-6 py-4 border border-blue-700"
+        >
+          <h3 class="text-xl font-bold mb-3 flex items-center">
+            <i class="fas fa-exchange-alt text-blue-300 mr-2"></i>전질권
+          </h3>
+          <p class="text-lg leading-relaxed">
+            질권자는 질권의 범위 내에서 질권설정자의 승낙 없이 자기 책임으로
+            전질이 가능함(책임전질, 채권ㆍ질권공동입질). 또한 질권설정자의
+            승낙을 얻어 전질할 수도 있음(승낙전질).
+          </p>
+        </div>
+      </div>
+      <!-- Visual representation of pledge -->
+      <!-- <div class="absolute bottom-28 right-16" id="pledge-diagram"></div> -->
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">43 / 50</div>
+      </div>
+    </div>
+    <script>
+      // Simple diagram to illustrate the pledge concept
+      const svg = d3
+        .select("#pledge-diagram")
+        .append("svg")
+        .attr("width", 200)
+        .attr("height", 120);
+
+      // Creditor
+      svg
+        .append("circle")
+        .attr("cx", 40)
+        .attr("cy", 40)
+        .attr("r", 30)
+        .attr("fill", "rgba(59, 130, 246, 0.5)")
+        .attr("stroke", "#93c5fd")
+        .attr("stroke-width", 2);
+
+      svg
+        .append("text")
+        .attr("x", 40)
+        .attr("y", 45)
+        .attr("text-anchor", "middle")
+        .attr("fill", "white")
+        .text("채권자");
+
+      // Debtor
+      svg
+        .append("circle")
+        .attr("cx", 160)
+        .attr("cy", 40)
+        .attr("r", 30)
+        .attr("fill", "rgba(59, 130, 246, 0.3)")
+        .attr("stroke", "#93c5fd")
+        .attr("stroke-width", 2);
+
+      svg
+        .append("text")
+        .attr("x", 160)
+        .attr("y", 45)
+        .attr("text-anchor", "middle")
+        .attr("fill", "white")
+        .text("채무자");
+
+      // Property
+      svg
+        .append("rect")
+        .attr("x", 85)
+        .attr("y", 80)
+        .attr("width", 30)
+        .attr("height", 30)
+        .attr("fill", "rgba(59, 130, 246, 0.7)")
+        .attr("stroke", "#93c5fd")
+        .attr("stroke-width", 2);
+
+      svg
+        .append("text")
+        .attr("x", 100)
+        .attr("y", 98)
+        .attr("text-anchor", "middle")
+        .attr("fill", "white")
+        .text("동산");
+
+      // Arrows
+      svg
+        .append("line")
+        .attr("x1", 70)
+        .attr("y1", 40)
+        .attr("x2", 130)
+        .attr("y2", 40)
+        .attr("stroke", "#93c5fd")
+        .attr("stroke-width", 2)
+        .attr("marker-end", "url(#arrow)");
+
+      svg
+        .append("line")
+        .attr("x1", 160)
+        .attr("y1", 70)
+        .attr("x2", 115)
+        .attr("y2", 80)
+        .attr("stroke", "#93c5fd")
+        .attr("stroke-width", 2)
+        .attr("marker-end", "url(#arrow)");
+
+      svg
+        .append("line")
+        .attr("x1", 85)
+        .attr("y1", 80)
+        .attr("x2", 40)
+        .attr("y2", 70)
+        .attr("stroke", "#93c5fd")
+        .attr("stroke-width", 2)
+        .attr("marker-end", "url(#arrow)");
+
+      // Arrow marker
+      svg
+        .append("defs")
+        .append("marker")
+        .attr("id", "arrow")
+        .attr("viewBox", "0 -5 10 10")
+        .attr("refX", 8)
+        .attr("refY", 0)
+        .attr("markerWidth", 6)
+        .attr("markerHeight", 6)
+        .attr("orient", "auto")
+        .append("path")
+        .attr("d", "M0,-5L10,0L0,5")
+        .attr("fill", "#93c5fd");
+    </script>
+  </body>
+</html>

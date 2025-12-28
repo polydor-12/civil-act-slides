@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>법률의 규정에 따른 소유권취득</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .requirement-item {
+        transition: all 0.2s ease;
+      }
+      .requirement-item:hover {
+        transform: translateX(5px);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <h1 class="text-4xl font-bold">법률의 규정에 따른 소유권취득</h1>
+        <div class="mt-2 text-blue-300">취득시효의 의의와 요건에 대한 설명</div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-36 bottom-16 left-0 right-0 px-16">
+        <!-- Introduction -->
+        <div class="mb-5">
+          <div class="flex items-center mb-4">
+            <div class="text-3xl text-blue-300 mr-4">
+              <i class="fas fa-hourglass-half"></i>
+            </div>
+            <h2 class="text-2xl font-bold">취득시효의 의의</h2>
+          </div>
+          <p class="text-lg ml-12">
+            일정한 요건을 갖추어 일정 기간 동안 부동산 또는 동산을 점유한 자가
+            그 재산의 소유권을 원시적으로 취득하게 되는 제도
+          </p>
+        </div>
+        <!-- Two types of acquisitive prescription -->
+        <div class="grid grid-cols-2 gap-10">
+          <!-- Left column: 부동산 점유취득시효 -->
+          <div
+            class="bg-blue-800 bg-opacity-40 rounded-lg px-6 py-3 border border-blue-700"
+          >
+            <div class="flex items-center mb-6">
+              <div class="text-3xl text-blue-300 mr-4">
+                <i class="fas fa-home"></i>
+              </div>
+              <h3 class="text-2xl font-semibold">부동산 점유취득시효</h3>
+            </div>
+            <div class="space-y-4 ml-4 text-xl">
+              <div class="requirement-item flex items-start">
+                <div class="text-blue-300 mr-3 mt-1">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  <p class="font-medium">소유의 의사로 평온ㆍ공연하게 점유</p>
+                  <p class="text-lg text-blue-200">
+                    자기 소유의 의사로 타인이 알 수 있는 방법으로 점유
+                  </p>
+                </div>
+              </div>
+              <div class="requirement-item flex items-start">
+                <div class="text-blue-300 mr-3 mt-1">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  <p class="font-medium">20년 동안의 점유</p>
+                  <p class="text-lg text-blue-200">
+                    중단 없이 20년간 지속적으로 점유
+                  </p>
+                </div>
+              </div>
+              <div class="requirement-item flex items-start">
+                <div class="text-blue-300 mr-3 mt-1">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  <p class="font-medium">취득시효완성에 따른 등기</p>
+                  <p class="text-lg text-blue-200">
+                    소유권 취득을 위해서는 등기 필요
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Timeline visualization for 20 years -->
+            <div class="mt-6 px-4" id="timeline1"></div>
+          </div>
+          <!-- Right column: 등기부취득시효 -->
+          <div
+            class="bg-blue-800 bg-opacity-40 rounded-lg px-6 py-3 border border-blue-700"
+          >
+            <div class="flex items-center mb-6">
+              <div class="text-3xl text-blue-300 mr-4">
+                <i class="fas fa-file-contract"></i>
+              </div>
+              <h3 class="text-2xl font-semibold">등기부취득시효</h3>
+            </div>
+            <div class="space-y-4 ml-4 text-xl">
+              <div class="requirement-item flex items-start">
+                <div class="text-blue-300 mr-3 mt-1">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  <p class="font-medium">
+                    소유의 의사ㆍ평온ㆍ공연ㆍ선의ㆍ무과실의 점유
+                  </p>
+                  <p class="text-lg text-blue-200">
+                    선의와 무과실이 추가 요건으로 필요
+                  </p>
+                </div>
+              </div>
+              <div class="requirement-item flex items-start">
+                <div class="text-blue-300 mr-3 mt-1">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  <p class="font-medium">점유자 명의의 등기</p>
+                  <p class="text-lg text-blue-200">
+                    이미 점유자의 명의로 등기가 되어 있어야 함
+                  </p>
+                </div>
+              </div>
+              <div class="requirement-item flex items-start">
+                <div class="text-blue-300 mr-3 mt-1">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  <p class="font-medium">10년 동안의 점유와 등기</p>
+                  <p class="text-lg text-blue-200">
+                    점유와 등기가 10년간 지속되어야 함
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Timeline visualization for 10 years -->
+            <div class="mt-6 px-4" id="timeline2"></div>
+          </div>
+        </div>
+        <!-- Note about effect -->
+        <div
+          class="mt-4 bg-blue-700 bg-opacity-30 p-4 rounded-lg border-l-4 border-blue-300"
+        >
+          <div class="flex items-center">
+            <div class="text-xl text-blue-300 mr-3">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <p class="text-lg">
+              취득시효가 완성되면 점유자는 점유물에 대한 권리를 확정적으로
+              원시취득하며, 점유를 개시한 때로 소급하여 효력이 발생합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">29 / 50</div>
+      </div>
+    </div>
+    <script>
+      // Timeline visualization for 20 years
+      const createTimeline = (elementId, years, label) => {
+        const width = 500;
+        const height = 50;
+
+        const svg = d3
+          .select(`#${elementId}`)
+          .append("svg")
+          .attr("width", width)
+          .attr("height", height);
+
+        // Create a scale for the timeline
+        const xScale = d3
+          .scaleLinear()
+          .domain([0, years])
+          .range([0, width - 100]);
+
+        // Add the line
+        svg
+          .append("line")
+          .attr("x1", 0)
+          .attr("y1", height / 2)
+          .attr("x2", width - 100)
+          .attr("y2", height / 2)
+          .attr("stroke", "#93c5fd")
+          .attr("stroke-width", 3);
+
+        // Add start point
+        svg
+          .append("circle")
+          .attr("cx", 0)
+          .attr("cy", height / 2)
+          .attr("r", 6)
+          .attr("fill", "#93c5fd");
+
+        // Add end point
+        svg
+          .append("circle")
+          .attr("cx", width - 100)
+          .attr("cy", height / 2)
+          .attr("r", 6)
+          .attr("fill", "#93c5fd");
+
+        // Add label for years
+        svg
+          .append("text")
+          .attr("x", width - 80)
+          .attr("y", height / 2 + 5)
+          .text(label)
+          .attr("fill", "#93c5fd")
+          .attr("font-size", "16px");
+      };
+
+      // Create both timelines
+      createTimeline("timeline1", 20, "20년");
+      createTimeline("timeline2", 10, "10년");
+    </script>
+  </body>
+</html>

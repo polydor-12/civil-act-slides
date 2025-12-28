@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>전형계약 - 매매</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #60a5fa;
+      }
+      .feature-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(37, 99, 235, 0.3);
+        margin: 0 auto 15px auto;
+      }
+      .contract-flow {
+        position: relative;
+      }
+      .flow-arrow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #60a5fa;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative text-xl">
+      <!-- Decorative elements -->
+      <div
+        class="absolute top-0 right-0 w-64 h-64 bg-blue-400 opacity-10 rounded-bl-full"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-80 h-80 bg-blue-300 opacity-10 rounded-tr-full"
+      ></div>
+      <!-- Header -->
+      <div class="w-full py-6 px-12 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">
+          전형계약 - 매매
+        </h1>
+      </div>
+      <!-- Main content -->
+      <div class="flex-1 px-6 py-4 flex flex-col">
+        <!-- Definition section -->
+        <div class="mb-8">
+          <div class="flex items-center mb-4">
+            <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+              <i class="fas fa-file-signature text-xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">매매의 의의</h2>
+          </div>
+          <div class="content-box rounded-md p-5 ml-10">
+            <p class="text-white mb-5">
+              <i class="fas fa-angle-right text-blue-300 mr-2"></i>
+              당사자 일방(매도인)이 재산권을 상대방에게 이전할 것을 약정하고
+              상대방(매수인)은 그 대금을 지급하기로 하는 계약
+            </p>
+            <!-- Contract flow visualization -->
+            <div class="flex items-center justify-center contract-flow">
+              <div
+                class="text-center px-6 py-4 bg-blue-800 bg-opacity-30 rounded-lg"
+              >
+                <i class="fas fa-user text-2xl text-blue-200 mb-2"></i>
+                <p class="text-blue-100 font-medium text-2xl">매도인</p>
+                <p class="text-lg text-blue-200">재산권 이전</p>
+              </div>
+              <div class="mx-8 relative">
+                <i class="fas fa-exchange-alt text-3xl text-blue-300"></i>
+              </div>
+              <div
+                class="text-center px-6 py-4 bg-blue-800 bg-opacity-30 rounded-lg"
+              >
+                <i class="fas fa-user-tie text-2xl text-blue-200 mb-2"></i>
+                <p class="text-blue-100 font-medium text-2xl">매수인</p>
+                <p class="text-lg text-blue-200">대금 지급</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Characteristics section -->
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+              <i class="fas fa-clipboard-list text-xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">
+              매매 계약의 특성
+            </h2>
+          </div>
+          <div class="grid grid-cols-3 gap-6 ml-10">
+            <!-- Characteristic 1 -->
+            <div
+              class="content-box rounded-md p-3 flex flex-col items-center text-center"
+            >
+              <div class="flex items-center">
+                <i class="mr-2 fas fa-check-circle text-3xl text-white"></i>
+                <h3 class="text-3xl font-medium text-blue-200 mb-2">
+                  낙성계약
+                </h3>
+              </div>
+              <p class="text-white">
+                당사자의 합의만으로 <br />
+                성립하는 계약
+              </p>
+            </div>
+            <!-- Characteristic 2 -->
+            <div
+              class="content-box rounded-md p-3 flex flex-col items-center text-center"
+            >
+              <div class="flex items-center">
+                <i class="mr-2 fas fa-sync-alt text-3xl text-white"></i>
+                <h3 class="text-3xl font-medium text-blue-200 mb-2">
+                  쌍무계약
+                </h3>
+              </div>
+              <p class="text-white">
+                당사자가 서로 대가적 의무를 <br />
+                부담하는 계약
+              </p>
+            </div>
+            <!-- Characteristic 3 -->
+            <div
+              class="content-box rounded-md p-3 flex flex-col items-center text-center"
+            >
+              <div class="flex items-center">
+                <i class="mr-2 fas fa-coins text-3xl text-white"></i>
+                <h3 class="text-3xl font-medium text-blue-200 mb-2">
+                  유상계약
+                </h3>
+              </div>
+              <p class="text-white">
+                대가를 지급하고 재산권을 <br />
+                취득하는 계약
+              </p>
+            </div>
+          </div>
+          <!-- Brief intro to warranty responsibility -->
+          <div
+            class="mt-6 ml-10 content-box rounded-md p-1 bg-blue-700 bg-opacity-20"
+          >
+            <div class="flex items-center py-3">
+              <i class="pl-3 fas fa-info-circle text-xl text-blue-300 mr-3"></i>
+              <p class="text-white">
+                <span class="font-medium text-blue-200">매도인의 담보책임</span>
+                : 매매의 유상성에 기초하여 인정되는 무과실책임으로, 모든
+                유상계약에 적용됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">18 / 32</p>
+      </div>
+    </div>
+  </body>
+</html>

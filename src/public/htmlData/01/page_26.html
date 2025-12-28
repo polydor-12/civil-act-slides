@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>중간생략등기와 부동산명의신탁</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .content-card {
+        background-color: rgba(30, 58, 138, 0.3);
+        border: 1px solid rgba(96, 165, 250, 0.3);
+        border-radius: 0.5rem;
+      }
+      .arrow {
+        position: relative;
+        height: 2px;
+        background-color: #60a5fa;
+      }
+      .arrow:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -4px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid #60a5fa;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <div class="flex justify-between items-center">
+          <div>
+            <h1 class="text-4xl font-bold">중간생략등기와 부동산명의신탁</h1>
+            <div class="mt-2 text-blue-300">
+              중간생략등기의 개념과 부동산명의신탁의 유형에 대한 설명
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div
+        class="absolute top-36 bottom-16 left-0 right-0 px-12 grid grid-cols-2 gap-8"
+      >
+        <!-- 중간생략등기 섹션 -->
+        <div class="content-card p-6">
+          <div class="flex items-center mb-4">
+            <div class="text-blue-300 text-3xl mr-3">
+              <i class="fas fa-exchange-alt"></i>
+            </div>
+            <h2 class="text-2xl font-bold">중간생략등기</h2>
+          </div>
+          <div class="mb-6">
+            <p class="mb-3 text-xl">
+              중간취득자의 명의로 해야 할 등기를 생략하고 최초의 양도인으로부터
+              직접 최후의 취득자에게 등기하는 것
+            </p>
+          </div>
+          <div class="relative h-32 mb-9">
+            <div class="w-full h-full" id="omission-diagram"></div>
+          </div>
+          <div class="space-y-3 ml-13">
+            <div class="flex items-start text-xl">
+              <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+              <p>
+                부동산등기 특별조치법에서 금지하지만 <br />
+                <span class="text-blue-300 font-medium">단속규정</span>으로 해석
+              </p>
+            </div>
+            <div class="flex items-start text-xl">
+              <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+              <p>
+                판례는
+                <span class="text-blue-300 font-medium">3자합의설</span>에 따라
+                유효하다고 봄
+              </p>
+            </div>
+            <div class="flex items-start text-xl">
+              <i class="fas fa-check-circle text-blue-300 mt-1 mr-2"></i>
+              <p>중간생략등기청구권도 인정됨</p>
+            </div>
+          </div>
+        </div>
+        <!-- 부동산명의신탁 섹션 -->
+        <div class="content-card p-6">
+          <div class="flex items-center mb-4">
+            <div class="text-blue-300 text-3xl mr-3">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <h2 class="text-2xl font-bold">부동산명의신탁</h2>
+          </div>
+          <div class="mb-4 text-xl">
+            <p class="mb-3">
+              대내적으로 명의신탁자가 부동산의 소유권을 가지고 <br />
+              관리 · 수익하지만 등기부상의 명의만을 명의수탁자로 <br />
+              해두는 것
+            </p>
+          </div>
+          <div class="space-y-6">
+            <!-- 양자간 등기명의신탁 -->
+            <div class="bg-blue-900 bg-opacity-50 p-4 rounded-lg">
+              <div class="flex items-center mb-4">
+                <i class="fas fa-users text-blue-300 mr-2"></i>
+                <h3 class="text-xl font-medium">양자간 등기명의신탁</h3>
+              </div>
+              <div class="pl-6">
+                <div class="flex items-start text-xl">
+                  <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                  <p>
+                    명의신탁 약정 및 그에 따른 등기는
+                    <span class="text-red-300 font-medium">무효</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- 계약명의신탁 -->
+            <div class="bg-blue-900 bg-opacity-50 p-4 rounded-lg">
+              <div class="flex items-center mb-4">
+                <i class="fas fa-file-contract text-blue-300 mr-2"></i>
+                <h3 class="text-xl font-medium">계약명의신탁</h3>
+              </div>
+              <div class="pl-6 space-y-2 text-xl">
+                <div class="flex items-start">
+                  <i
+                    class="fas fa-exclamation-circle text-yellow-300 mt-1 mr-2"
+                  ></i>
+                  <p>제3자가 명의신탁사실을 모른 경우</p>
+                </div>
+                <div class="flex items-start">
+                  <i class="fas fa-arrow-right text-blue-300 mt-1 mr-2"></i>
+                  <p>제3자와 명의수탁자 사이의 물권변동이 인정됨</p>
+                </div>
+                <div class="flex items-start">
+                  <i class="fas fa-arrow-right text-blue-300 mt-1 mr-2"></i>
+                  <p>
+                    <span class="text-blue-300 font-medium"
+                      >명의수탁자가 소유자가 됨</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">26 / 50</div>
+      </div>
+    </div>
+    <script>
+      // D3.js visualization for 중간생략등기
+      document.addEventListener("DOMContentLoaded", function () {
+        const svg = d3
+          .select("#omission-diagram")
+          .append("svg")
+          .attr("width", "100%")
+          .attr("height", "100%");
+
+        // Add entities
+        const entities = [
+          { id: "first", name: "최초 양도인", x: 50, y: 60 },
+          { id: "middle", name: "중간 취득자", x: 250, y: 60 },
+          { id: "last", name: "최종 취득자", x: 450, y: 60 },
+        ];
+
+        // Create entity nodes
+        const entityGroups = svg
+          .selectAll("g")
+          .data(entities)
+          .enter()
+          .append("g")
+          .attr("transform", (d) => `translate(${d.x}, ${d.y})`);
+
+        // Add circles for entities
+        entityGroups
+          .append("circle")
+          .attr("r", 30)
+          .attr("fill", "rgba(30, 58, 138, 0.6)")
+          .attr("stroke", "#60a5fa")
+          .attr("stroke-width", 2);
+
+        // Add entity labels
+        entityGroups
+          .append("text")
+          .attr("text-anchor", "middle")
+          .attr("dy", 5)
+          .attr("fill", "white")
+          .text((d) => d.name);
+
+        // Add normal path arrow
+        svg
+          .append("line")
+          .attr("x1", 80)
+          .attr("y1", 60)
+          .attr("x2", 220)
+          .attr("y2", 60)
+          .attr("stroke", "#60a5fa")
+          .attr("stroke-width", 2)
+          .attr("marker-end", "url(#arrow)");
+
+        svg
+          .append("line")
+          .attr("x1", 280)
+          .attr("y1", 60)
+          .attr("x2", 420)
+          .attr("y2", 60)
+          .attr("stroke", "#60a5fa")
+          .attr("stroke-width", 2)
+          .attr("marker-end", "url(#arrow)");
+
+        // Add omission path (curved arrow)
+        svg
+          .append("path")
+          .attr("d", "M80,80 Q250,140 420,80")
+          .attr("fill", "none")
+          .attr("stroke", "#f87171")
+          .attr("stroke-width", 2.5)
+          .attr("stroke-dasharray", "5,5")
+          .attr("marker-end", "url(#arrow-red)");
+
+        // Add text for omission path
+        svg
+          .append("text")
+          .attr("x", 250)
+          .attr("y", 127)
+          .attr("text-anchor", "middle")
+          .attr("fill", "#f87171")
+          .text("중간생략등기");
+
+        // Define arrow markers
+        svg
+          .append("defs")
+          .append("marker")
+          .attr("id", "arrow")
+          .attr("viewBox", "0 -5 10 10")
+          .attr("refX", 8)
+          .attr("refY", 0)
+          .attr("markerWidth", 6)
+          .attr("markerHeight", 6)
+          .attr("orient", "auto")
+          .append("path")
+          .attr("d", "M0,-5L10,0L0,5")
+          .attr("fill", "#60a5fa");
+
+        svg
+          .append("defs")
+          .append("marker")
+          .attr("id", "arrow-red")
+          .attr("viewBox", "0 -5 10 10")
+          .attr("refX", 8)
+          .attr("refY", 0)
+          .attr("markerWidth", 6)
+          .attr("markerHeight", 6)
+          .attr("orient", "auto")
+          .append("path")
+          .attr("d", "M0,-5L10,0L0,5")
+          .attr("fill", "#f87171");
+      });
+    </script>
+  </body>
+</html>

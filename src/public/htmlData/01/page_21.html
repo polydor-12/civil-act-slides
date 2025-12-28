@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>공시의 원칙 및 공신의 원칙</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .principle-card {
+        transition: all 0.3s ease;
+      }
+      .principle-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <h1 class="text-4xl font-bold">공시의 원칙 및 공신의 원칙</h1>
+        <div class="mt-2 text-blue-300">
+          물권변동에서의 공시와 공신의 원칙에 대한 설명
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-36 bottom-16 left-0 right-0 px-12">
+        <!-- Introduction -->
+        <div class="mb-5">
+          <div class="flex items-start">
+            <div class="text-blue-300 text-3xl mt-1 mr-4">
+              <i class="fas fa-info-circle"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">물권변동과 공시방법</h3>
+              <p class="text-lg">
+                물권의 존재 및 변동은 언제나 외부에서 인식할 수 있는 방법이
+                수반되어야 한다는 원칙
+              </p>
+              <p class="text-lg mt-1">
+                민법은 성립요건주의(형식주의)를 규정함 - 공시방법을 갖추지
+                않으면 물권변동이 일어나지 않음
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Two principles comparison -->
+        <div class="grid grid-cols-2 gap-8">
+          <!-- Public Notice Principle -->
+          <div
+            class="principle-card bg-blue-800 bg-opacity-50 rounded-lg px-6 py-4 border border-blue-700"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-blue-300 text-3xl mr-3">
+                <i class="fas fa-bullhorn"></i>
+              </div>
+              <h3 class="text-2xl font-bold">공시의 원칙</h3>
+            </div>
+            <div class="mb-4">
+              <h4 class="text-xl font-semibold mb-2 text-blue-200">개념</h4>
+              <p class="ml-5">물권의 귀속 및 물권의 내용을 외부에 알리는 것</p>
+              <p class="ml-5 mt-1">
+                물권의 존재 및 변동은 외부에서 인식할 수 있는 방법이 수반되어야
+                함
+              </p>
+            </div>
+            <div
+              class="principle-card bg-blue-800 bg-opacity-50 rounded-lg p-2 border border-blue-700"
+            >
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-xl font-semibold mb-2 text-blue-200">동산</h4>
+                  <ul class="space-y-2 ml-7">
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-check-circle mt-1 mr-2 text-green-400"
+                      ></i>
+                      <span>동산의 공시방법 - 점유 (사실상의 지배)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-info-circle mt-1 mr-2 text-blue-300"></i>
+                      <span
+                        >점유 이전의 방법 - 현실의 인도, 간의인도, 점유개정,
+                        <br />
+                        목적물반환청구권의 양도</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold mb-2 text-blue-200">
+                    부동산
+                  </h4>
+                  <ul class="space-y-2 ml-7">
+                    <li class="flex items-start">
+                      <i class="fas fa-times-circle mt-1 mr-2 text-red-400"></i>
+                      <span>부동산의 공시방법 - 등기</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-info-circle mt-1 mr-2 text-blue-300"></i>
+                      <span
+                        >부동산 물권의 변동은 등기를 요건으로 함(예외도
+                        있음)</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Public Faith Principle -->
+          <div
+            class="principle-card bg-blue-800 bg-opacity-50 rounded-lg px-6 py-4 border border-blue-700"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-blue-300 text-3xl mr-3">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3 class="text-2xl font-bold">공신의 원칙</h3>
+            </div>
+            <div class="mb-4">
+              <h4 class="text-xl font-semibold mb-2 text-blue-200">개념</h4>
+              <p class="ml-5">
+                물권에 관한 공시방법을 믿고 거래한 자의 신뢰는 공시가 진실한
+                권리관계와 일치하지 않는 경우에도 보호되어야 한다는 원칙
+              </p>
+            </div>
+            <div
+              class="principle-card bg-blue-800 bg-opacity-50 rounded-lg p-2 border border-blue-700"
+            >
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-xl font-semibold mb-2 text-blue-200">동산</h4>
+                  <ul class="space-y-2 ml-7">
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-check-circle mt-1 mr-2 text-green-400"
+                      ></i>
+                      <span>점유의 공신력 인정 (선의취득 제도)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-info-circle mt-1 mr-2 text-blue-300"></i>
+                      <span
+                        >동적 안전을 우선적으로 보호 - 동산의 원활한 유통
+                        도모</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold mb-2 text-blue-200">
+                    부동산
+                  </h4>
+                  <ul class="space-y-2 ml-7">
+                    <li class="flex items-start">
+                      <i class="fas fa-times-circle mt-1 mr-2 text-red-400"></i>
+                      <span>등기의 공신력 불인정</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-info-circle mt-1 mr-2 text-blue-300"></i>
+                      <span>진정한 권리자 보호 (정적 안전 중시)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-exclamation-circle mt-1 mr-2 text-yellow-400"
+                      ></i>
+                      <span>특별히 제3자 보호규정이 있는 경우에만 보호</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">21 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

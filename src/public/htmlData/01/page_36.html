@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>지상권의 갱신청구권과 지상물매수청구권</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .feature-card {
+        transition: transform 0.3s ease;
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+      .process-arrow {
+        position: relative;
+      }
+      .process-arrow::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        width: 20px;
+        height: 2px;
+        background-color: rgba(147, 197, 253, 0.5);
+        transform: translateY(-50%);
+      }
+      .process-arrow::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid rgba(147, 197, 253, 0.5);
+        border-right: 2px solid rgba(147, 197, 253, 0.5);
+        transform: translateY(-50%) rotate(45deg);
+      }
+      .process-node:last-child .process-arrow::after,
+      .process-node:last-child .process-arrow::before {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <div class="flex justify-between items-center">
+          <div>
+            <h1 class="text-4xl font-bold">
+              지상권의 갱신청구권과 지상물매수청구권
+            </h1>
+            <div class="mt-2 text-blue-300">
+              지상권 종료 시 인정되는 권리에 대한 설명
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-36 bottom-20 left-0 right-0 px-16">
+        <!-- Process flow diagram -->
+        <div class="flex justify-center mb-10">
+          <div class="flex items-center">
+            <div class="grid grid-cols-4 gap-5">
+              <div class="grid-cols-1 process-node flex items-center">
+                <div
+                  class="w-16 h-16 rounded-full bg-blue-700 flex items-center justify-center border-2 border-blue-300"
+                >
+                  <i class="fas fa-hourglass-end text-2xl text-blue-300"></i>
+                </div>
+                <div class="ml-3 text-lg">
+                  <div class="font-semibold">지상권 존속기간 만료</div>
+                  <div class="text-blue-300 text-sm">지상물 현존</div>
+                </div>
+              </div>
+              <div class="grid-cols-1 process-node flex items-center">
+                <div
+                  class="w-16 h-16 rounded-full bg-blue-700 flex items-center justify-center border-2 border-blue-300"
+                >
+                  <i class="fas fa-sync-alt text-2xl text-blue-300"></i>
+                </div>
+                <div class="ml-3 text-lg">
+                  <div class="font-semibold">갱신청구권 행사</div>
+                  <div class="text-blue-300 text-sm">
+                    지상권설정자에게 계약갱신 <br />
+                    청구
+                  </div>
+                </div>
+              </div>
+              <div class="grid-cols-1 process-node flex items-center">
+                <div
+                  class="w-16 h-16 rounded-full bg-blue-700 flex items-center justify-center border-2 border-blue-300"
+                >
+                  <i class="fas fa-times text-2xl text-blue-300"></i>
+                </div>
+                <div class="ml-3 text-lg">
+                  <div class="font-semibold">갱신청구 거절</div>
+                  <div class="text-blue-300 text-sm">
+                    지상권설정자가 갱신을 거절한 <br />
+                    경우
+                  </div>
+                </div>
+              </div>
+              <div class="grid-cols-1 process-node flex items-center">
+                <div
+                  class="w-16 h-16 rounded-full bg-blue-700 flex items-center justify-center border-2 border-blue-300"
+                >
+                  <i class="fas fa-shopping-cart text-2xl text-blue-300"></i>
+                </div>
+                <div class="ml-3 text-lg">
+                  <div class="font-semibold">지상물매수청구권 행사</div>
+                  <div class="text-blue-300 text-sm">
+                    지상권자가 지상물매수청구권<br />
+                    행사
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Two columns for comparison -->
+        <div class="grid grid-cols-2 gap-10">
+          <!-- 갱신청구권 -->
+          <div
+            class="feature-card bg-blue-800 bg-opacity-50 rounded-lg p-8 border border-blue-700 shadow-lg"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-14 h-14 rounded-full bg-blue-700 flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-sync text-3xl text-blue-300"></i>
+              </div>
+              <h3 class="text-2xl font-bold">지상권자의 갱신청구권</h3>
+            </div>
+            <ul class="space-y-4 text-xl">
+              <li class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-700 flex items-center justify-center mr-3 mt-0.5"
+                >
+                  <i class="fas fa-check text-sm text-blue-300"></i>
+                </div>
+                <div>
+                  <span class="font-semibold">의의 :</span> 존속기간이 만료한 후
+                  지상물이 존재하는 때에는 지상권설정자에게 계약갱신 청구가능
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-700 flex items-center justify-center mr-3 mt-0.5"
+                >
+                  <i class="fas fa-check text-sm text-blue-300"></i>
+                </div>
+                <div><span class="font-semibold">법적 성격 :</span> 청구권</div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-700 flex items-center justify-center mr-3 mt-0.5"
+                >
+                  <i class="fas fa-check text-sm text-blue-300"></i>
+                </div>
+                <div>
+                  <span class="font-semibold">요건 :</span> 지상권 존속기간 만료
+                  + 지상물의 현존
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-700 flex items-center justify-center mr-3 mt-0.5"
+                >
+                  <i class="fas fa-check text-sm text-blue-300"></i>
+                </div>
+                <div>
+                  <span class="font-semibold">효과 :</span> 지상권설정자는
+                  갱신청구에 응해야 할 의무가 있음 (단, 정당한 이유가 있으면
+                  거절 가능)
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- 지상물매수청구권 -->
+          <div
+            class="feature-card bg-blue-800 bg-opacity-50 rounded-lg p-8 border border-blue-700 shadow-lg"
+          >
+            <div class="flex items-center mb-6">
+              <div
+                class="w-14 h-14 rounded-full bg-blue-700 flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-shopping-cart text-3xl text-blue-300"></i>
+              </div>
+              <h3 class="text-2xl font-bold">지상권자의 지상물매수청구권</h3>
+            </div>
+            <ul class="space-y-4 text-xl">
+              <li class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-700 flex items-center justify-center mr-3 mt-0.5"
+                >
+                  <i class="fas fa-check text-sm text-blue-300"></i>
+                </div>
+                <div>
+                  <span class="font-semibold">의의 :</span> 지상권설정자가
+                  갱신청구를 거절한 경우 지상권자는 지상물매수청구권을 행사할 수
+                  있음
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-700 flex items-center justify-center mr-3 mt-0.5"
+                >
+                  <i class="fas fa-check text-sm text-blue-300"></i>
+                </div>
+                <div><span class="font-semibold">법적 성격 :</span> 형성권</div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-700 flex items-center justify-center mr-3 mt-0.5"
+                >
+                  <i class="fas fa-check text-sm text-blue-300"></i>
+                </div>
+                <div>
+                  <span class="font-semibold">요건 :</span> 갱신청구의 거절
+                  (지상권설정자가 갱신을 거절한 경우)
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-700 flex items-center justify-center mr-3 mt-0.5"
+                >
+                  <i class="fas fa-check text-sm text-blue-300"></i>
+                </div>
+                <div>
+                  <span class="font-semibold">효과 :</span> 청구에 의해
+                  지상권설정자는 지상물을 매수할 의무가 발생함 (적정한 가격으로
+                  매수)
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">36 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

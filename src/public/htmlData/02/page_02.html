@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>채권법의 개요</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #60a5fa;
+      }
+      .feature-box {
+        transition: all 0.3s ease;
+      }
+      .feature-box:hover {
+        transform: translateY(-5px);
+      }
+      .feature-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(37, 99, 235, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative">
+      <!-- Decorative elements -->
+      <div
+        class="absolute top-0 left-0 w-48 h-48 bg-blue-400 opacity-10 rounded-br-full"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-64 h-64 bg-blue-300 opacity-10 rounded-tl-full"
+      ></div>
+      <!-- Header -->
+      <div class="w-full py-6 px-12 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">
+          채권법의 개요
+        </h1>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 px-12 py-10 flex flex-col">
+        <!-- Concept section -->
+        <div class="mb-10">
+          <div class="flex items-center mb-6">
+            <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+              <i class="fas fa-book-open text-xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">
+              채권법의 개념과 위치
+            </h2>
+          </div>
+          <div class="content-box rounded-md text-xl p-6 ml-10">
+            <p class="text-white mb-5">
+              • 채권법 : 당사자 사이의 채권ㆍ채무관계를 규율하는 법규
+            </p>
+            <p class="text-white mb-5">
+              • 위치 : 제3편 채권(제373조~제776조) 및 주택임대차보호법 등의
+              민사특별법
+            </p>
+            <p class="text-white">• 물권법과 함께 재산법에 속함</p>
+          </div>
+        </div>
+        <!-- Characteristics section -->
+        <div>
+          <div class="flex items-center mb-7">
+            <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+              <i class="fas fa-fingerprint text-xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">채권법의 특질</h2>
+          </div>
+          <div class="grid grid-cols-3 gap-6 ml-10">
+            <!-- Feature 1 -->
+            <div
+              class="feature-box content-box rounded-md p-6 flex flex-col items-center"
+            >
+              <div class="feature-icon mb-3">
+                <i class="fas fa-gavel text-xl text-white"></i>
+              </div>
+              <h3 class="text-2xl font-medium text-blue-200 mb-2">
+                임의규정성
+              </h3>
+              <p class="text-white text-xl text-center">
+                사적자치의 영역이 넓음
+              </p>
+            </div>
+            <!-- Feature 2 -->
+            <div
+              class="feature-box content-box rounded-md p-6 flex flex-col items-center"
+            >
+              <div class="feature-icon mb-3">
+                <i class="fas fa-globe text-xl text-white"></i>
+              </div>
+              <h3 class="text-2xl font-medium text-blue-200 mb-2">
+                국제적보편성
+              </h3>
+              <p class="text-white text-xl text-center">
+                국제적으로 보편적인 원칙 적용
+              </p>
+            </div>
+            <!-- Feature 3 -->
+            <div
+              class="feature-box content-box rounded-md p-6 flex flex-col items-center"
+            >
+              <div class="feature-icon mb-3">
+                <i class="fas fa-balance-scale text-xl text-white"></i>
+              </div>
+              <h3 class="text-2xl font-medium text-blue-200 mb-2">
+                신의칙의 지배
+              </h3>
+              <p class="text-white text-xl text-center">
+                신의성실의 원칙이 강하게 적용
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">2 / 32</p>
+      </div>
+    </div>
+  </body>
+</html>

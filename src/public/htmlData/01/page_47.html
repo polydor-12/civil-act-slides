@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>저당권의 실행절차</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .process-step {
+        transition: all 0.3s ease;
+      }
+      .process-step:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .arrow {
+        position: relative;
+        height: 2px;
+        background-color: rgba(144, 205, 244, 0.6);
+        margin-top: 75px;
+      }
+      .arrow:after {
+        content: "";
+        position: absolute;
+        right: -10px;
+        top: -9px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid rgba(144, 205, 244, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <div class="flex justify-between items-center">
+          <div>
+            <h1 class="text-4xl font-bold">저당권의 실행절차</h1>
+            <div class="mt-2 text-blue-300">
+              민사집행법에 따른 저당권 실행절차에 대한 설명
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-40 bottom-10 left-0 right-0 px-12">
+        <!-- Process flow -->
+        <div class="flex justify-between items-start">
+          <!-- Step 1 -->
+          <div
+            class="process-step bg-blue-800 bg-opacity-50 rounded-lg p-6 w-52 border border-blue-700 text-center flex flex-col items-center"
+          >
+            <div class="text-blue-300 text-3xl mb-4">
+              <i class="fas fa-file-signature"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Step 1</h3>
+            <p class="text-lg">저당권자의 경매 신청</p>
+          </div>
+          <!-- Arrow 1 -->
+          <div class="arrow w-20"></div>
+          <!-- Step 2 -->
+          <div
+            class="process-step bg-blue-800 bg-opacity-50 rounded-lg p-6 w-52 border border-blue-700 text-center flex flex-col items-center"
+          >
+            <div class="text-blue-300 text-3xl mb-4">
+              <i class="fas fa-gavel"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Step 2</h3>
+            <p class="text-lg">집행법원의 경매개시결정 및 현황조사</p>
+          </div>
+          <!-- Arrow 2 -->
+          <div class="arrow w-20"></div>
+          <!-- Step 3 -->
+          <div
+            class="process-step bg-blue-800 bg-opacity-50 rounded-lg p-6 w-52 border border-blue-700 text-center flex flex-col items-center"
+          >
+            <div class="text-blue-300 text-3xl mb-4">
+              <i class="fas fa-coins"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Step 3</h3>
+            <p class="text-lg">현금화 준비<br />(최저매각가격 정함)</p>
+          </div>
+          <!-- Arrow 3 -->
+          <div class="arrow w-20"></div>
+          <!-- Step 4 -->
+          <div
+            class="process-step bg-blue-800 bg-opacity-50 rounded-lg p-6 w-52 border border-blue-700 text-center flex flex-col items-center"
+          >
+            <div class="text-blue-300 text-3xl mb-4">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Step 4</h3>
+            <p class="text-lg">매각허가결정<br />(최고가매수신청인이 결정시)</p>
+          </div>
+          <!-- Arrow 4 -->
+          <div class="arrow w-20"></div>
+          <!-- Step 5 -->
+          <div
+            class="process-step bg-blue-800 bg-opacity-50 rounded-lg p-6 w-52 border border-blue-700 text-center flex flex-col items-center"
+          >
+            <div class="text-blue-300 text-3xl mb-4">
+              <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Step 5</h3>
+            <p class="text-lg">매각대금의 배당</p>
+          </div>
+        </div>
+        <!-- Additional information -->
+        <div class="mt-9 grid grid-cols-2 gap-8">
+          <div
+            class="bg-blue-800 bg-opacity-30 rounded-lg p-6 border border-blue-700"
+          >
+            <div class="flex items-start">
+              <div class="text-blue-300 text-2xl mr-4">
+                <i class="fas fa-key"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">매수인의 소유권 취득</h3>
+                <p class="text-lg">
+                  매수인은 매각대금 완납시 부동산의 소유권을 취득합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-blue-800 bg-opacity-30 rounded-lg p-6 border border-blue-700"
+          >
+            <div class="flex items-start">
+              <div class="text-blue-300 text-2xl mr-4">
+                <i class="fas fa-file-contract"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">담보물권의 소멸</h3>
+                <p class="text-lg">
+                  경매대상 부동산에 존재하는 모든 담보물권은 소멸합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Notes -->
+        <div
+          class="mt-8 bg-blue-700 bg-opacity-20 rounded-lg p-4 border border-blue-600"
+        >
+          <div class="flex items-start">
+            <div class="text-yellow-300 text-xl mr-3 mt-1">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div>
+              <p class="text-lg">
+                저당권 실행절차는 민사집행법에 따라 진행되며, 채무자가 변제기에
+                변제하지 않으면 저당목적물을 현금화하여 그 대금에서 다른
+                채권자보다 우선하여 변제를 받을 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">47 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

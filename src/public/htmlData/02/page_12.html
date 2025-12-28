@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>계약의 의의</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #60a5fa;
+      }
+      .freedom-item {
+        transition: all 0.3s ease;
+        border-left: 3px solid transparent;
+      }
+      .freedom-item:hover {
+        border-left: 3px solid #60a5fa;
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative">
+      <!-- Decorative elements -->
+      <div
+        class="absolute top-0 right-0 w-48 h-48 bg-blue-400 opacity-10 rounded-bl-full"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-64 h-64 bg-blue-300 opacity-10 rounded-tr-full"
+      ></div>
+      <!-- Header -->
+      <div class="w-full py-6 px-12 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">계약의 의의</h1>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 px-10 pt-6 pb-12 flex flex-col">
+        <!-- Main content area - two columns -->
+        <div class="flex flex-1">
+          <!-- Left column - Definition and social function -->
+          <div class="w-1/2 pr-3">
+            <div class="flex items-center mb-4">
+              <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+                <i class="fas fa-handshake text-xl text-white"></i>
+              </div>
+              <h2 class="text-2xl font-semibold text-blue-100">
+                계약의 정의와 사회적 작용
+              </h2>
+            </div>
+            <div class="content-box rounded-md px-4 pt-4 pb-6 mb-6">
+              <h3 class="text-xl font-medium text-blue-200 mb-4">
+                계약의 정의
+              </h3>
+              <p class="text-white text-xl pl-3 mb-4">
+                계약당사자들 사이에 서로 대립하는 의사표시의 합치로
+              </p>
+              <p class="text-white text-xl pl-3">성립하는 법률행위</p>
+            </div>
+            <div class="content-box rounded-md px-4 pt-4 pb-6">
+              <h3 class="text-xl font-medium text-blue-200 mb-4">
+                사회적 작용
+              </h3>
+              <ul class="text-white text-xl space-y-4">
+                <li>
+                  <i class="fas fa-check text-blue-300 mr-2"></i>사적자치의
+                  원칙의 실현위한 기본적인 수단
+                </li>
+                <li>
+                  <i class="fas fa-check text-blue-300 mr-2"></i>계약에 의해
+                  발생된 법률관계를 국가가 보호
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="w-1/2 pl-3">
+            <div class="flex items-center mb-4">
+              <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+                <i class="fas fa-handshake text-xl text-white"></i>
+              </div>
+              <h2 class="text-2xl font-semibold text-blue-100">
+                계약의 자유와 제한
+              </h2>
+            </div>
+            <div class="content-box rounded-md p-4 mb-6">
+              <h3 class="text-xl font-medium text-blue-200 mb-2">
+                계약자유의 내용
+              </h3>
+
+              <ul class="text-xl grid grid-cols-2">
+                <li class="freedom-item text-white p-2 rounded">
+                  <i class="fas fa-check text-blue-300 mr-2"></i>계약체결의 자유
+                </li>
+                <li class="freedom-item text-white p-2 rounded">
+                  <i class="fas fa-check text-blue-300 mr-2"></i>계약상대방
+                  선택의 자유
+                </li>
+                <li class="freedom-item text-white p-2 rounded">
+                  <i class="fas fa-check text-blue-300 mr-2"></i>계약내용 결정의
+                  자유
+                </li>
+                <li class="freedom-item text-white p-2 rounded">
+                  <i class="fas fa-check text-blue-300 mr-2"></i>계약체결 방식의
+                  자유
+                </li>
+              </ul>
+            </div>
+            <div class="content-box rounded-md p-4">
+              <h3 class="text-xl font-medium text-blue-200 mb-2">
+                계약자유의 제한
+              </h3>
+
+              <ul class="text-xl grid grid-cols-2">
+                <li class="freedom-item text-white p-2 rounded">
+                  <i class="fas fa-ban text-red-300 mr-2"></i>공법상ㆍ사법상
+                  체약강제
+                </li>
+                <li class="freedom-item text-white p-2 rounded">
+                  <i class="fas fa-ban text-red-300 mr-2"></i>내용결정의 자유의
+                  제한
+                </li>
+                <li class="freedom-item text-white p-2 rounded">
+                  <i class="fas fa-ban text-red-300 mr-2"></i>계약방식의 제한
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom section - Standard terms and conditions -->
+        <div>
+          <div class="flex items-center mb-3">
+            <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+              <i class="fas fa-file-contract text-xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">보통거래약관</h2>
+          </div>
+          <div
+            class="content-box rounded-md px-4 py-6 flex items-center text-xl"
+          >
+            <div class="flex-1 border-r border-blue-400 border-opacity-30 pr-4">
+              <p class="text-white">일방당사자가 계약내용을 정함</p>
+            </div>
+            <div class="flex-1 border-r border-blue-400 border-opacity-30 px-4">
+              <p class="text-white">약관규제법에 의해 내용이 통제됨</p>
+            </div>
+            <div class="flex-1 pl-4">
+              <p class="text-white">부당한 약관조항을 무효로 함</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">12 / 32</p>
+      </div>
+    </div>
+  </body>
+</html>

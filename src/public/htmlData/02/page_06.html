@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>채무불이행의 의의</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        width: 1280px;
+        min-height: 720px;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #2563eb 100%
+        );
+      }
+      .title-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid #60a5fa;
+      }
+      .section-card {
+        transition: all 0.3s ease;
+        background-color: rgba(30, 58, 138, 0.5);
+        border: 1px solid rgba(96, 165, 250, 0.3);
+      }
+      .section-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide bg-gradient flex flex-col relative">
+      <!-- Decorative elements -->
+      <div
+        class="absolute top-0 right-0 w-48 h-48 bg-blue-400 opacity-10 rounded-bl-full"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-64 h-64 bg-blue-300 opacity-10 rounded-tr-full"
+      ></div>
+      <!-- Header -->
+      <div class="w-full py-6 px-12 border-b border-blue-400 border-opacity-30">
+        <h1 class="text-4xl font-bold text-white title-shadow">
+          채무불이행의 의의
+        </h1>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 p-10 flex flex-col">
+        <!-- Main concept section -->
+        <div class="mb-8">
+          <div class="flex items-center mb-3">
+            <div class="mr-4 bg-blue-600 bg-opacity-50 rounded-full p-2">
+              <i class="fas fa-exclamation-circle text-xl text-white"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-100">
+              채무불이행의 개념
+            </h2>
+          </div>
+          <div class="content-box rounded-md py-4 px-10 text-white text-xl">
+            <p class="mb-4">
+              • 채무자가 그의
+              <span class="text-yellow-300 font-semibold">귀책사유</span>로
+              인하여 채무를 이행하지 못하는 상태
+            </p>
+            <p class="mb-4">
+              • 이행불능, 이행지체, 불완전이행 세 가지의 유형이 인정됨
+            </p>
+            <p class="">
+              • 채무불이행이 인정되면 채무자는 그 유형에 따라
+              <span class="text-yellow-300 font-semibold"
+                >손해배상 등의 책임</span
+              >을 짐
+            </p>
+          </div>
+        </div>
+        <!-- Two columns for the remaining sections -->
+        <div class="grid grid-cols-2 gap-8">
+          <!-- Debtor's Attribution -->
+          <div class="section-card rounded-lg p-5">
+            <div class="flex items-center mb-4">
+              <div class="mr-3 bg-blue-500 bg-opacity-50 rounded-full p-2">
+                <i class="fas fa-user-shield text-xl text-white"></i>
+              </div>
+              <h2 class="text-2xl font-semibold text-blue-100">
+                채무자의 귀책사유
+              </h2>
+            </div>
+            <ul class="ml-4 space-y-3 text-xl">
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue-300 mt-1 mr-2"></i>
+                <p class="text-white">고의ㆍ과실 (추상적 경과실)</p>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue-300 mt-1 mr-2"></i>
+                <p class="text-white">
+                  법정대리인과 이행보조자의 고의ㆍ과실도 포함
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!-- Not Breach of Obligation -->
+          <div class="section-card rounded-lg p-5">
+            <div class="flex items-center mb-4">
+              <div class="mr-3 bg-blue-500 bg-opacity-50 rounded-full p-2">
+                <i class="fas fa-ban text-xl text-white"></i>
+              </div>
+              <h2 class="text-2xl font-semibold text-blue-100">
+                채무불이행이 아닌 경우 (급부장애)
+              </h2>
+            </div>
+            <ul class="ml-4 space-y-3 text-xl">
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue-300 mt-1 mr-2"></i>
+                <p class="text-white">
+                  채무자의 귀책사유 없이 채무가 이행되지 않는 경우
+                </p>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue-300 mt-1 mr-2"></i>
+                <div>
+                  <p class="text-white mb-2">
+                    예 : 원시적 불능, 채무자의 귀책사유 없는 후발적 불능,
+                  </p>
+                  <p class="text-white pl-10">채권자지체 등</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Breach types preview -->
+        <div
+          class="mt-6 content-box rounded-md p-3 flex justify-center items-center"
+        >
+          <div class="flex items-center text-2xl">
+            <div class="px-3 py-1 bg-blue-700 bg-opacity-50 rounded-md mx-2">
+              <p class="text-white font-medium">이행불능</p>
+            </div>
+            <i class="fas fa-random text-blue-300 mx-2"></i>
+            <div class="px-3 py-1 bg-blue-700 bg-opacity-50 rounded-md mx-2">
+              <p class="text-white font-medium">이행지체</p>
+            </div>
+            <i class="fas fa-random text-blue-300 mx-2"></i>
+            <div class="px-3 py-1 bg-blue-700 bg-opacity-50 rounded-md mx-2">
+              <p class="text-white font-medium">불완전이행</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with page number -->
+      <div class="absolute bottom-4 right-8">
+        <p class="text-blue-200 text-lg">6 / 32</p>
+      </div>
+    </div>
+  </body>
+</html>

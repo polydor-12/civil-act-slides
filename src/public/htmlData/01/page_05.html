@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>민법의 기본원리</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .timeline-item {
+        position: relative;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -40px;
+        top: 24px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #4299e1;
+        z-index: 1;
+      }
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        left: -33px;
+        top: 40px;
+        width: 2px;
+        height: calc(100% - 24px);
+        background-color: #4299e1;
+        z-index: 0;
+      }
+      .timeline-item:last-child::after {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <div class="flex justify-between items-center">
+          <div class="flex">
+            <h1 class="text-4xl font-bold">민법의 기본원리</h1>
+            <div class="w-3"></div>
+            <div class="mt-2 text-blue-300">
+              근대민법의 기본원리와 역사적 배경
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-32 bottom-10 left-0 right-0 px-16">
+        <div class="flex h-full">
+          <!-- Left section: Historical background -->
+          <div class="w-1/2 pr-8">
+            <div
+              class="bg-blue-800 bg-opacity-50 rounded-lg p-8 h-full border border-blue-700"
+            >
+              <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <i class="fas fa-history text-blue-300 mr-3"></i>
+                역사적 배경
+              </h2>
+              <div class="pl-10">
+                <div class="timeline-item pb-6">
+                  <h3 class="text-xl font-semibold text-blue-300">
+                    중세 봉건사회의 극복
+                  </h3>
+                  <p class="mt-2 text-lg">
+                    신분구속적 봉건사회의 제약을 극복하고 근대 자본주의사회의
+                    요구를 반영
+                  </p>
+                </div>
+                <div class="timeline-item pb-6">
+                  <h3 class="text-xl font-semibold text-blue-300">
+                    개인의 재인식
+                  </h3>
+                  <p class="mt-2 text-lg">
+                    개인을 인격적ㆍ이성적 존재로 이해하며 개인의 자유를 중시
+                  </p>
+                </div>
+                <div class="timeline-item pb-6">
+                  <h3 class="text-xl font-semibold text-blue-300">
+                    근대 민법전의 성립
+                  </h3>
+                  <p class="mt-2 text-lg">
+                    프랑스민법전, 독일민법전 등에서 근대민법의 기본원리가 확립됨
+                  </p>
+                </div>
+                <div class="timeline-item">
+                  <h3 class="text-xl font-semibold text-blue-300">
+                    자본주의 발전
+                  </h3>
+                  <p class="mt-2 text-lg">
+                    자본주의 경제체제의 발전과 함께 민법의 기본원리도 변화와
+                    수정을 겪음
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Right section: Basic principles -->
+          <div class="w-1/2 pl-8">
+            <div
+              class="bg-blue-800 bg-opacity-50 rounded-lg p-8 h-full border border-blue-700"
+            >
+              <h2 class="text-2xl font-bold mb-9 flex items-center">
+                <i class="fas fa-balance-scale text-blue-300 mr-3"></i>
+                근대민법의 기본원리
+              </h2>
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="text-3xl text-blue-300 mr-4">
+                    <i class="fas fa-home"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold">사유재산권존중의 원칙</h3>
+                    <p class="mt-1 text-lg">
+                      개인의 재산이 타인 또는 국가권력으로부터 침해되지 않아야
+                      함
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="text-3xl text-blue-300 mr-4">
+                    <i class="fas fa-handshake"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold">사적자치의 원칙</h3>
+                    <p class="mt-1 text-lg">
+                      개인의 자유로운 의사에 따라 법률행위를 통해 권리와 의무를
+                      발생ㆍ변경ㆍ소멸시킬 수 있음
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="text-3xl text-blue-300 mr-4">
+                    <i class="fas fa-gavel"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold">과실책임의 원칙</h3>
+                    <p class="mt-1 text-lg">
+                      행위자의 고의 또는 과실이 인정되지 않는 경우 그 손해에
+                      대하여 책임을 지지 않는다는 원칙
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="mt-8 p-4 bg-blue-700 bg-opacity-50 rounded-lg border border-blue-600"
+                >
+                  <p class="text-lg flex items-center">
+                    <i class="fas fa-info-circle text-blue-300 mr-2"></i>
+                    이러한 근대민법의 기본원리들은 현대에 와서 일부 수정되어
+                    적용되고 있습니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">5 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

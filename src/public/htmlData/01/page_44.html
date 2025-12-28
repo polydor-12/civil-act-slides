@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>권리질권</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .feature-box {
+        transition: all 0.3s ease;
+      }
+      .feature-box:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <h1 class="text-4xl font-bold">권리질권</h1>
+        <div class="mt-2 text-blue-300">
+          권리질권의 성립요건과 효력에 대한 설명
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-36 bottom-16 left-0 right-0 px-16">
+        <!-- Definition Section -->
+        <div class="mb-8">
+          <div class="flex items-center mb-4">
+            <div class="text-3xl text-blue-300 mr-4">
+              <i class="fas fa-file-contract"></i>
+            </div>
+            <h2 class="text-2xl font-semibold">권리질권의 의의</h2>
+          </div>
+          <div class="ml-12 text-lg">
+            <p>
+              권리를 목적으로 하는 질권 -
+              <span class="text-blue-300 font-medium">채권질권이 일반적임</span>
+            </p>
+          </div>
+        </div>
+        <!-- Main content in two columns -->
+        <div class="flex gap-12">
+          <!-- Left column: Establishment Requirements -->
+          <div class="w-1/2">
+            <div
+              class="feature-box bg-blue-800 bg-opacity-50 rounded-lg p-8 border border-blue-700 h-full"
+            >
+              <div class="flex items-center mb-6">
+                <div class="text-3xl text-blue-300 mr-4">
+                  <i class="fas fa-clipboard-list"></i>
+                </div>
+                <h2 class="text-2xl font-semibold">성립요건</h2>
+              </div>
+              <ul class="space-y-4 text-xl">
+                <li class="flex">
+                  <div class="text-blue-300 mr-4 mt-1">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div>
+                    <span class="font-medium">피담보채권</span>
+                  </div>
+                </li>
+                <li class="flex">
+                  <div class="text-blue-300 mr-4 mt-1">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div>
+                    <span class="font-medium">질권설정계약</span>
+                  </div>
+                </li>
+                <li class="flex">
+                  <div class="text-blue-300 mr-4 mt-1">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div>
+                    <span class="font-medium">질권의 목적이 되는 권리</span>
+                    <div class="text-lg text-blue-100 mt-1">
+                      (부동산 사용ㆍ수익권 불가)
+                    </div>
+                  </div>
+                </li>
+                <li class="flex">
+                  <div class="text-blue-300 mr-4 mt-1">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div>
+                    <span class="font-medium"
+                      >채권의 이전방식에 따라 설정됨</span
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Right column: Effects -->
+          <div class="w-1/2">
+            <div
+              class="feature-box bg-blue-800 bg-opacity-50 rounded-lg p-8 border border-blue-700 h-full"
+            >
+              <div class="flex items-center mb-6">
+                <div class="text-3xl text-blue-300 mr-4">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <h2 class="text-2xl font-semibold">효력</h2>
+              </div>
+              <ul class="space-y-6 text-xl">
+                <li>
+                  <div class="flex items-center mb-2">
+                    <div class="text-blue-300 mr-3">
+                      <i class="fas fa-hand-holding"></i>
+                    </div>
+                    <span class="font-medium text-xl">유치적 효력</span>
+                  </div>
+                  <div class="ml-9 text-blue-100">동산에 비하여 약함</div>
+                </li>
+                <li>
+                  <div class="flex items-center mb-2">
+                    <div class="text-blue-300 mr-3">
+                      <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <span class="font-medium text-xl"
+                      >권리(채권)의 직접청구</span
+                    >
+                  </div>
+                  <div class="ml-9 text-blue-100">
+                    질권자는 채권의 내용에 따라 직접 청구 가능
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center mb-2">
+                    <div class="text-blue-300 mr-3">
+                      <i class="fas fa-gavel"></i>
+                    </div>
+                    <span class="font-medium text-xl"
+                      >민사집행법에 따른 집행</span
+                    >
+                  </div>
+                  <div class="ml-9 text-blue-100">
+                    민사집행법에 따라 권리에 대한 집행 절차 진행
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Footnotes -->
+        <div class="mt-8 text-sm text-blue-200">
+          <div class="flex items-start">
+            <div class="mr-2 mt-0.5">※</div>
+            <div>
+              권리질권은 동산질권과 달리 권리의 특성에 따라 설정방법과 효력이
+              다르게 적용됩니다.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">44 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>

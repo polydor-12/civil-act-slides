@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>제1강 민법의 개요</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        width: 1280px;
+        min-height: 720px;
+        margin: 0;
+        padding: 0;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        position: relative;
+      }
+      .bg-pattern {
+        opacity: 0.05;
+        background-image: linear-gradient(
+            to right,
+            #ffffff 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      .topic-card {
+        transition: all 0.3s ease;
+      }
+      .topic-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container bg-gradient-to-br from-blue-900 to-blue-800 text-white relative"
+    >
+      <!-- Background pattern -->
+      <div class="bg-pattern absolute inset-0"></div>
+      <!-- Header with title and lecture number -->
+      <div class="absolute top-0 left-0 right-0 px-12 py-8">
+        <div class="flex justify-between items-center">
+          <div>
+            <h1 class="text-4xl font-bold">제1강 민법의 개요</h1>
+            <div class="mt-2 text-blue-300">
+              민법의 체계, 구성 및 기본 개념에 대한 소개
+            </div>
+          </div>
+          <div class="text-right">
+            <div class="text-blue-300">강의 일자</div>
+            <div class="text-xl">1/16(금)</div>
+          </div>
+        </div>
+        <div class="w-full h-px bg-blue-300 bg-opacity-50 mt-6"></div>
+      </div>
+      <!-- Main content -->
+      <div class="absolute top-40 bottom-20 left-0 right-0 px-16">
+        <div class="grid grid-cols-3 gap-8 h-full">
+          <!-- Card 1: 민법의 체계 -->
+          <div
+            class="topic-card bg-blue-800 bg-opacity-50 rounded-lg p-8 flex flex-col border border-blue-700"
+          >
+            <div class="text-blue-300 text-4xl mb-4">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3 class="text-3xl font-bold mb-6">민법의 체계</h3>
+            <ul class="space-y-6 text-2xl flex-grow">
+              <li class="flex items-start">
+                <i class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"></i>
+                <span>형식적 의미의 민법</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"></i>
+                <span>실질적 의미의 민법</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"></i>
+                <span>민법의 특질</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Card 2: 민법의 기본원리 -->
+          <div
+            class="topic-card bg-blue-800 bg-opacity-50 rounded-lg p-8 flex flex-col border border-blue-700"
+          >
+            <div class="text-blue-300 text-4xl mb-4">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <h3 class="text-3xl font-bold mb-6">민법의 기본원리</h3>
+            <ul class="space-y-6 text-2xl flex-grow">
+              <li class="flex items-start">
+                <i class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"></i>
+                <span>근대민법의 기본원리</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"></i>
+                <span>사유재산권존중의 원칙</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"></i>
+                <span>사적자치의 원칙</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"></i>
+                <span>과실책임의 원칙</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"></i>
+                <span>민법의 수정원리</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Card 3: 민법의 기본개념 -->
+          <div
+            class="topic-card bg-blue-800 bg-opacity-50 rounded-lg p-8 flex flex-col border border-blue-700"
+          >
+            <div class="text-blue-300 text-4xl mb-4">
+              <i class="fas fa-gavel"></i>
+            </div>
+            <h3 class="text-3xl font-bold mb-6">민법의 기본개념</h3>
+            <ul class="space-y-6 text-2xl flex-grow">
+              <li class="flex items-start">
+                <i class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"></i>
+                <span>사법상의 권리와 의무</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"></i>
+                <span>법률관계</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"></i>
+                <span>법률행위</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"></i>
+                <span>신의성실의 원칙</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-angle-right mt-1.5 mr-2 text-blue-300"></i>
+                <span>권리남용금지의 원칙</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Footer with slide number -->
+      <div class="absolute bottom-4 right-8">
+        <div class="text-sm text-blue-300">2 / 50</div>
+      </div>
+    </div>
+  </body>
+</html>
