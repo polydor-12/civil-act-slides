@@ -110,7 +110,15 @@ const firebaseConfig = {
   appId: "1:224199581514:web:579053596871a9d3b9ebb3",
 };
 
+let tailCode = "";
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-changePage();
+async function main() {
+  const res = await fetch(
+    "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
+  );
+  tailCode = await res.text();
+  console.log(tailCode);
+  changePage();
+}
