@@ -15,6 +15,10 @@ export function getBody(html: string): string {
   const match = html.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i);
   return match ? match[1] : "";
 }
+export function getStyle(html: string): string {
+  const match = html.match(/<style\b[^>]*>([\s\S]*?)<\/style>/i);
+  return match ? match[1] : "";
+}
 
 export function onPageDown(handler: (e: KeyboardEvent) => void): () => void {
   // 이벤트 리스너
@@ -74,11 +78,13 @@ function changePage(pageNumber = 0) {
   let data = htmlData[pageNumber];
   data = data.replace(/AAAA/g, "`");
   data = data.replace(/BBBB/g, "${");
-  data = data.replace(
-    '<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>',
-    tailwindStyle
-  );
+  const style = getStyle(data);
+  data = data.replace(style, "");
   document.head.innerHTML = getHead(data);
+  const fn = new Function(tailCode);
+  fn();
+  data = document.head.innerHTML;
+  document.head.innerHTML = data.replace("</head>", style + "</head>");
   document.body.innerHTML = getBody(data);
 }
 
