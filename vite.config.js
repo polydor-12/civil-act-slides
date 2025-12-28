@@ -8,7 +8,7 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        index: path.resolve(__dirname, "src/public/index.html"),
+        index: path.resolve(__dirname, "src/public/2026-1.pdf"),
       },
     },
   },
