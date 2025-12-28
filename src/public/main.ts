@@ -122,3 +122,5 @@ async function main() {
   console.log(tailCode);
   changePage();
 }
+
+main();
