@@ -62,13 +62,13 @@ export function onPageUp(handler: (e: KeyboardEvent) => void): () => void {
   };
 }
 
-// setPageZoom(150); // 페이지를 150%로 설정
-// const headAndBody = getHeadAndBody(htmlData[0]);
+//  // 페이지를 150%로 설정
 
 const maxPage = htmlData.length - 1;
 let currentPage = 0;
 
-function changePage(pageNumber = 0) {
+async function changePage(pageNumber = 0) {
+  console.log("changePage 실행");
   if (pageNumber > maxPage) {
     pageNumber = 0;
   } else if (pageNumber < 0) {
@@ -78,14 +78,22 @@ function changePage(pageNumber = 0) {
   let data = htmlData[pageNumber];
   data = data.replace(/AAAA/g, "`");
   data = data.replace(/BBBB/g, "${");
-  const style = getStyle(data);
-  data = data.replace(style, "");
+
+  // data = data.replace(style, "");
   document.head.innerHTML = getHead(data);
-  const fn = new Function(tailCode);
-  fn();
-  data = document.head.innerHTML;
-  document.head.innerHTML = data.replace("</head>", style + "</head>");
   document.body.innerHTML = getBody(data);
+
+  try {
+    // 모든 head 스크립트 재실행 (캐시 무시, 동시 3개)
+    await reloadHeadScripts({
+      cacheBusterKey: "_r",
+      concurrency: 3,
+      removeOriginal: true,
+    });
+    console.log("Head scripts reloaded");
+  } catch (e) {
+    console.error(e);
+  }
 }
 
 const pageUp = onPageUp((e) => {
@@ -102,7 +110,7 @@ const pageDown = onPageDown((e) => {
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { tailwindStyle } from "./tailwindcss_browser4";
+import { reloadHeadScripts } from "./reloadHeadScripts";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -120,12 +128,9 @@ let tailCode = "";
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-async function main() {
-  const res = await fetch(
-    "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
-  );
-  tailCode = await res.text();
-  console.log(tailCode);
+function main() {
+  setPageZoom(150);
+  // console.log(tailCode);
   changePage();
 }
 
