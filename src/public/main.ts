@@ -74,6 +74,10 @@ function changePage(pageNumber = 0) {
   let data = htmlData[pageNumber];
   data = data.replace(/AAAA/g, "`");
   data = data.replace(/BBBB/g, "${");
+  data = data.replace(
+    '<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>',
+    tailwindStyle
+  );
   document.head.innerHTML = getHead(data);
   document.body.innerHTML = getBody(data);
 }
@@ -92,6 +96,7 @@ const pageDown = onPageDown((e) => {
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { tailwindStyle } from "./tailwindcss_browser4";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
